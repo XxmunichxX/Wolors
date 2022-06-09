@@ -1,0 +1,692 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB73D968284F975C009AD019 /* PuzzleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73D967284F975B009AD019 /* PuzzleView.swift */; };
+		AB73D96B284F9AF0009AD019 /* LevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73D96A284F9AF0009AD019 /* LevelModel.swift */; };
+		AB73D96D284F9B49009AD019 /* LevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73D96C284F9B49009AD019 /* LevelViewModel.swift */; };
+		AB73D971284FC0B3009AD019 /* ResetRectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73D970284FC0B3009AD019 /* ResetRectView.swift */; };
+		AB73D973284FCF68009AD019 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73D972284FCF68009AD019 /* TextField.swift */; };
+		AB73D975284FD602009AD019 /* GuessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73D974284FD602009AD019 /* GuessView.swift */; };
+		AB7AC0282852812D005E116E /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7AC0272852812D005E116E /* GameState.swift */; };
+		AB7AC02A2852849F005E116E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7AC0292852849F005E116E /* ContentView.swift */; };
+		AB927FD2284E2191000FBCD2 /* WolorsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB927FD1284E2191000FBCD2 /* WolorsApp.swift */; };
+		AB927FD4284E2191000FBCD2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB927FD3284E2191000FBCD2 /* MainView.swift */; };
+		AB927FD6284E2193000FBCD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB927FD5284E2193000FBCD2 /* Assets.xcassets */; };
+		AB927FD9284E2193000FBCD2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB927FD8284E2193000FBCD2 /* Preview Assets.xcassets */; };
+		AB927FE3284E2193000FBCD2 /* WolorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB927FE2284E2193000FBCD2 /* WolorsTests.swift */; };
+		AB927FED284E2193000FBCD2 /* WolorsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB927FEC284E2193000FBCD2 /* WolorsUITests.swift */; };
+		AB927FEF284E2193000FBCD2 /* WolorsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB927FEE284E2193000FBCD2 /* WolorsUITestsLaunchTests.swift */; };
+		AB927FFD284E272A000FBCD2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB927FFC284E272A000FBCD2 /* Color.swift */; };
+		AB928000284E28DD000FBCD2 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB927FFF284E28DD000FBCD2 /* Planet.swift */; };
+		AB928002284E3124000FBCD2 /* HudShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB928001284E3123000FBCD2 /* HudShape.swift */; };
+		AB928004284E38B6000FBCD2 /* LevelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB928003284E38B6000FBCD2 /* LevelButton.swift */; };
+		ABF89B90284FE95900633CB9 /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF89B8F284FE95900633CB9 /* BackButtonView.swift */; };
+		ABF89B922850E6E300633CB9 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF89B912850E6E300633CB9 /* UserModel.swift */; };
+		ABF89B942851333800633CB9 /* YesNoButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF89B932851333800633CB9 /* YesNoButtons.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AB927FDF284E2193000FBCD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB927FC6284E2191000FBCD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB927FCD284E2191000FBCD2;
+			remoteInfo = Wolors;
+		};
+		AB927FE9284E2193000FBCD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB927FC6284E2191000FBCD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB927FCD284E2191000FBCD2;
+			remoteInfo = Wolors;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AB73D967284F975B009AD019 /* PuzzleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleView.swift; sourceTree = "<group>"; };
+		AB73D96A284F9AF0009AD019 /* LevelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelModel.swift; sourceTree = "<group>"; };
+		AB73D96C284F9B49009AD019 /* LevelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
+		AB73D970284FC0B3009AD019 /* ResetRectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetRectView.swift; sourceTree = "<group>"; };
+		AB73D972284FCF68009AD019 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		AB73D974284FD602009AD019 /* GuessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessView.swift; sourceTree = "<group>"; };
+		AB7AC0272852812D005E116E /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		AB7AC0292852849F005E116E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AB927FCE284E2191000FBCD2 /* Wolors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wolors.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB927FD1284E2191000FBCD2 /* WolorsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WolorsApp.swift; sourceTree = "<group>"; };
+		AB927FD3284E2191000FBCD2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		AB927FD5284E2193000FBCD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB927FD8284E2193000FBCD2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AB927FDE284E2193000FBCD2 /* WolorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WolorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB927FE2284E2193000FBCD2 /* WolorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WolorsTests.swift; sourceTree = "<group>"; };
+		AB927FE8284E2193000FBCD2 /* WolorsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WolorsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB927FEC284E2193000FBCD2 /* WolorsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WolorsUITests.swift; sourceTree = "<group>"; };
+		AB927FEE284E2193000FBCD2 /* WolorsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WolorsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AB927FFC284E272A000FBCD2 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		AB927FFF284E28DD000FBCD2 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		AB928001284E3123000FBCD2 /* HudShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudShape.swift; sourceTree = "<group>"; };
+		AB928003284E38B6000FBCD2 /* LevelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelButton.swift; sourceTree = "<group>"; };
+		ABF89B8F284FE95900633CB9 /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
+		ABF89B912850E6E300633CB9 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		ABF89B932851333800633CB9 /* YesNoButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YesNoButtons.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB927FCB284E2191000FBCD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB927FDB284E2193000FBCD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB927FE5284E2193000FBCD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB73D969284F97B8009AD019 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AB927FD3284E2191000FBCD2 /* MainView.swift */,
+				AB73D967284F975B009AD019 /* PuzzleView.swift */,
+				AB73D974284FD602009AD019 /* GuessView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AB73D96E284FA2B7009AD019 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AB73D96A284F9AF0009AD019 /* LevelModel.swift */,
+				ABF89B912850E6E300633CB9 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AB73D96F284FA2C8009AD019 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AB73D96C284F9B49009AD019 /* LevelViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AB927FC5284E2191000FBCD2 = {
+			isa = PBXGroup;
+			children = (
+				AB927FD0284E2191000FBCD2 /* Wolors */,
+				AB927FE1284E2193000FBCD2 /* WolorsTests */,
+				AB927FEB284E2193000FBCD2 /* WolorsUITests */,
+				AB927FCF284E2191000FBCD2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AB927FCF284E2191000FBCD2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB927FCE284E2191000FBCD2 /* Wolors.app */,
+				AB927FDE284E2193000FBCD2 /* WolorsTests.xctest */,
+				AB927FE8284E2193000FBCD2 /* WolorsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB927FD0284E2191000FBCD2 /* Wolors */ = {
+			isa = PBXGroup;
+			children = (
+				AB927FD1284E2191000FBCD2 /* WolorsApp.swift */,
+				AB7AC0292852849F005E116E /* ContentView.swift */,
+				AB73D96E284FA2B7009AD019 /* Models */,
+				AB73D96F284FA2C8009AD019 /* ViewModels */,
+				AB73D969284F97B8009AD019 /* Views */,
+				AB927FFE284E28C8000FBCD2 /* Components */,
+				AB927FFB284E2718000FBCD2 /* Extensions */,
+				AB927FD5284E2193000FBCD2 /* Assets.xcassets */,
+				AB927FD7284E2193000FBCD2 /* Preview Content */,
+			);
+			path = Wolors;
+			sourceTree = "<group>";
+		};
+		AB927FD7284E2193000FBCD2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AB927FD8284E2193000FBCD2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AB927FE1284E2193000FBCD2 /* WolorsTests */ = {
+			isa = PBXGroup;
+			children = (
+				AB927FE2284E2193000FBCD2 /* WolorsTests.swift */,
+			);
+			path = WolorsTests;
+			sourceTree = "<group>";
+		};
+		AB927FEB284E2193000FBCD2 /* WolorsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AB927FEC284E2193000FBCD2 /* WolorsUITests.swift */,
+				AB927FEE284E2193000FBCD2 /* WolorsUITestsLaunchTests.swift */,
+			);
+			path = WolorsUITests;
+			sourceTree = "<group>";
+		};
+		AB927FFB284E2718000FBCD2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AB927FFC284E272A000FBCD2 /* Color.swift */,
+				AB73D972284FCF68009AD019 /* TextField.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AB927FFE284E28C8000FBCD2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AB7AC0272852812D005E116E /* GameState.swift */,
+				AB927FFF284E28DD000FBCD2 /* Planet.swift */,
+				AB928001284E3123000FBCD2 /* HudShape.swift */,
+				ABF89B8F284FE95900633CB9 /* BackButtonView.swift */,
+				AB928003284E38B6000FBCD2 /* LevelButton.swift */,
+				AB73D970284FC0B3009AD019 /* ResetRectView.swift */,
+				ABF89B932851333800633CB9 /* YesNoButtons.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB927FCD284E2191000FBCD2 /* Wolors */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB927FF2284E2193000FBCD2 /* Build configuration list for PBXNativeTarget "Wolors" */;
+			buildPhases = (
+				AB927FCA284E2191000FBCD2 /* Sources */,
+				AB927FCB284E2191000FBCD2 /* Frameworks */,
+				AB927FCC284E2191000FBCD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Wolors;
+			productName = Wolors;
+			productReference = AB927FCE284E2191000FBCD2 /* Wolors.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AB927FDD284E2193000FBCD2 /* WolorsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB927FF5284E2193000FBCD2 /* Build configuration list for PBXNativeTarget "WolorsTests" */;
+			buildPhases = (
+				AB927FDA284E2193000FBCD2 /* Sources */,
+				AB927FDB284E2193000FBCD2 /* Frameworks */,
+				AB927FDC284E2193000FBCD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB927FE0284E2193000FBCD2 /* PBXTargetDependency */,
+			);
+			name = WolorsTests;
+			productName = WolorsTests;
+			productReference = AB927FDE284E2193000FBCD2 /* WolorsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AB927FE7284E2193000FBCD2 /* WolorsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB927FF8284E2193000FBCD2 /* Build configuration list for PBXNativeTarget "WolorsUITests" */;
+			buildPhases = (
+				AB927FE4284E2193000FBCD2 /* Sources */,
+				AB927FE5284E2193000FBCD2 /* Frameworks */,
+				AB927FE6284E2193000FBCD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB927FEA284E2193000FBCD2 /* PBXTargetDependency */,
+			);
+			name = WolorsUITests;
+			productName = WolorsUITests;
+			productReference = AB927FE8284E2193000FBCD2 /* WolorsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB927FC6284E2191000FBCD2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					AB927FCD284E2191000FBCD2 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					AB927FDD284E2193000FBCD2 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = AB927FCD284E2191000FBCD2;
+					};
+					AB927FE7284E2193000FBCD2 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = AB927FCD284E2191000FBCD2;
+					};
+				};
+			};
+			buildConfigurationList = AB927FC9284E2191000FBCD2 /* Build configuration list for PBXProject "Wolors" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AB927FC5284E2191000FBCD2;
+			productRefGroup = AB927FCF284E2191000FBCD2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB927FCD284E2191000FBCD2 /* Wolors */,
+				AB927FDD284E2193000FBCD2 /* WolorsTests */,
+				AB927FE7284E2193000FBCD2 /* WolorsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB927FCC284E2191000FBCD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB927FD9284E2193000FBCD2 /* Preview Assets.xcassets in Resources */,
+				AB927FD6284E2193000FBCD2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB927FDC284E2193000FBCD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB927FE6284E2193000FBCD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB927FCA284E2191000FBCD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB927FD4284E2191000FBCD2 /* MainView.swift in Sources */,
+				AB73D973284FCF68009AD019 /* TextField.swift in Sources */,
+				ABF89B90284FE95900633CB9 /* BackButtonView.swift in Sources */,
+				AB928002284E3124000FBCD2 /* HudShape.swift in Sources */,
+				AB927FD2284E2191000FBCD2 /* WolorsApp.swift in Sources */,
+				AB7AC0282852812D005E116E /* GameState.swift in Sources */,
+				AB73D96D284F9B49009AD019 /* LevelViewModel.swift in Sources */,
+				AB7AC02A2852849F005E116E /* ContentView.swift in Sources */,
+				AB73D968284F975C009AD019 /* PuzzleView.swift in Sources */,
+				AB73D96B284F9AF0009AD019 /* LevelModel.swift in Sources */,
+				ABF89B922850E6E300633CB9 /* UserModel.swift in Sources */,
+				AB73D975284FD602009AD019 /* GuessView.swift in Sources */,
+				AB73D971284FC0B3009AD019 /* ResetRectView.swift in Sources */,
+				AB927FFD284E272A000FBCD2 /* Color.swift in Sources */,
+				AB928004284E38B6000FBCD2 /* LevelButton.swift in Sources */,
+				ABF89B942851333800633CB9 /* YesNoButtons.swift in Sources */,
+				AB928000284E28DD000FBCD2 /* Planet.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB927FDA284E2193000FBCD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB927FE3284E2193000FBCD2 /* WolorsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB927FE4284E2193000FBCD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB927FEF284E2193000FBCD2 /* WolorsUITestsLaunchTests.swift in Sources */,
+				AB927FED284E2193000FBCD2 /* WolorsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AB927FE0284E2193000FBCD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB927FCD284E2191000FBCD2 /* Wolors */;
+			targetProxy = AB927FDF284E2193000FBCD2 /* PBXContainerItemProxy */;
+		};
+		AB927FEA284E2193000FBCD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB927FCD284E2191000FBCD2 /* Wolors */;
+			targetProxy = AB927FE9284E2193000FBCD2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AB927FF0284E2193000FBCD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AB927FF1284E2193000FBCD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB927FF3284E2193000FBCD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_ASSET_PATHS = "\"Wolors/Preview Content\"";
+				DEVELOPMENT_TEAM = XEW3LDVT97;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Francesco-Monaco.Wolors";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		AB927FF4284E2193000FBCD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_ASSET_PATHS = "\"Wolors/Preview Content\"";
+				DEVELOPMENT_TEAM = XEW3LDVT97;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Francesco-Monaco.Wolors";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		AB927FF6284E2193000FBCD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XEW3LDVT97;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Francesco-Monaco.WolorsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wolors.app/Wolors";
+			};
+			name = Debug;
+		};
+		AB927FF7284E2193000FBCD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XEW3LDVT97;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Francesco-Monaco.WolorsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wolors.app/Wolors";
+			};
+			name = Release;
+		};
+		AB927FF9284E2193000FBCD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XEW3LDVT97;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Francesco-Monaco.WolorsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Wolors;
+			};
+			name = Debug;
+		};
+		AB927FFA284E2193000FBCD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XEW3LDVT97;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Francesco-Monaco.WolorsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Wolors;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB927FC9284E2191000FBCD2 /* Build configuration list for PBXProject "Wolors" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB927FF0284E2193000FBCD2 /* Debug */,
+				AB927FF1284E2193000FBCD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB927FF2284E2193000FBCD2 /* Build configuration list for PBXNativeTarget "Wolors" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB927FF3284E2193000FBCD2 /* Debug */,
+				AB927FF4284E2193000FBCD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB927FF5284E2193000FBCD2 /* Build configuration list for PBXNativeTarget "WolorsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB927FF6284E2193000FBCD2 /* Debug */,
+				AB927FF7284E2193000FBCD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB927FF8284E2193000FBCD2 /* Build configuration list for PBXNativeTarget "WolorsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB927FF9284E2193000FBCD2 /* Debug */,
+				AB927FFA284E2193000FBCD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AB927FC6284E2191000FBCD2 /* Project object */;
+}
