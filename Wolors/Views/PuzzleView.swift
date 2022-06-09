@@ -93,9 +93,16 @@ struct PuzzleView: View {
                     }
                     .alert("YAYYY! CORRECT! 😁 ", isPresented: $showSuccessAlert) {
                         Button("Great!"){
-                            dismiss.callAsFunction()
+                           // dismiss.callAsFunction() // DISPATACHQUEUE
                             vm.levels[vm.selectedLevel].isSolved = true
                             vm.selectedLevel += 1
+                            withAnimation(.linear(duration: 2)) {
+                                blurOffset = 0
+                            }
+                            
+                            DispatchQueue.main.asyncAfter(deadline: .now()+4) {
+                                dismiss.callAsFunction()
+                            }
                         }
                     }
                     .alert("OH NO! 😩 \nThe answer is incorrect!", isPresented: $showWrongAlert) {
