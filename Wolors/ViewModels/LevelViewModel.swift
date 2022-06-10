@@ -11,10 +11,10 @@ class LevelViewModel: ObservableObject {
         
     @Published var levels: [Level] = [
         Level(image: "Baloon", answers: ["Baloons", "Love", "Sky", "Flying"], isSolved: false),
-        Level(image: "Mother", isSolved: false),
-        Level(image: "Ocean", isSolved: false),
-        Level(image: "Tree", isSolved: false)
-    ]
+        Level(image: "Mother", answers: ["Mother", "Baby", "Love"], isSolved: false),
+        Level(image: "Ocean", answers: ["Ocean", "Sea", "Wale", "Turtle"], isSolved: false),
+        Level(image: "Tree", answers: ["Tree", "Sun", "Savana", "Hot"], isSolved: false)
+            ]
     
     @Published var solvedLevels = [Level]()
     

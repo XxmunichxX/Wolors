@@ -12,6 +12,8 @@ struct MainView: View {
     @EnvironmentObject var vm: LevelViewModel
     @EnvironmentObject var user: User
     
+    // CREATE A CLASS TO STORE THESE PROPERTIES
+    
     let colorOne: LinearGradient = LinearGradient(colors: [.theme.bigPlanetFirst, .theme.bigPlanetSecond], startPoint: .leading, endPoint: .trailing)
     
     let colorTwo: LinearGradient = LinearGradient(colors: [.indigo, .purple], startPoint: .leading, endPoint: .trailing)
@@ -33,68 +35,21 @@ struct MainView: View {
     @State var levelXposition:CGFloat = 200
     @State var levelYposition:CGFloat = 200
     
+    @State var opacity = 1
+    
     
     var body: some View {
         ZStack {
             Color.theme.background.ignoresSafeArea()
             
-            /* Text("CURRENT LEVEL: \(vm.selectedLevel)")
-             .offset(y: -40)*/
+            Planets
             
-            Group {
-                Planet(heigth: 500, width: 500, color: colorOne)
-                    .position(x: screen.minX+30, y: screen.maxY+100)
-                    .offset(x: CGFloat(positionXFirstPlanet), y: CGFloat(positionYFirstPlanet))
-                    .onAppear {
-                        withAnimation(.linear(duration: 15).repeatForever(autoreverses: true)) {
-                            positionXFirstPlanet += 20
-                            positionYFirstPlanet = -20
-                        }
-                    }
-                
-                Planet(heigth: 150, width: 150, color: colorTwo)
-                    .position(x: screen.minX, y: screen.maxY-200)
-                    .offset(x: CGFloat(positionXSecondPlanet), y: CGFloat(positionYSecondPlanet))
-                    .onAppear {
-                        withAnimation(.linear(duration: 10).repeatForever(autoreverses: true)) {
-                            positionXSecondPlanet += 30
-                        }
-                    }
-                
-                Planet(heigth: 150, width: 150, color: colorThree)
-                    .position(x: screen.maxX, y: screen.midY-100)
-                    .offset(x: CGFloat(positionXThirdPlanet))
-                    .onAppear {
-                        withAnimation(.linear(duration: 10).repeatForever(autoreverses: true)) {
-                            positionXThirdPlanet -= 40
-                        }
-                    }
-                Planet(heigth: 40, width: 40, color: colorOne)
-                    .position(x: 30, y: 200)
-                Planet(heigth: 20, width: 20, color: colorTwo)
-                    .position(x: 230, y: 10)
-                Planet(heigth: 20, width: 20, color: colorThree)
-                    .position(x: 100, y: 400)
-                Planet(heigth: 10, width: 10, color: colorThree)
-                    .position(x: 30, y: 300)
-                Planet(heigth: 30, width: 30, color: colorOne)
-                    .position(x: 300, y: 450)
-                Planet(heigth: 10, width: 10, color: colorOne)
-                    .position(x: 330, y: 220)
+            ZStack{
+                MenuView(opacity: $opacity)
             }
+            .zIndex(opacity)
             
-            Group {
-                LevelButton(selectedLevel: .constant(0), image: vm.levels[levelSelected].image, isSolved: vm.levels[levelSelected].isSolved)
-                    .position(x: vm.levels[levelSelected].isSolved ? 300 : UIScreen.main.bounds.midX, y: vm.levels[levelSelected].isSolved ? 650 : UIScreen.main.bounds.midY)
-                
-                LevelButton(selectedLevel: .constant(1), image: vm.levels[levelSelected].image, isSolved: vm.levels[levelSelected].isSolved)
-                    .position(x: vm.levels[levelSelected].isSolved ? 200 : UIScreen.main.bounds.midX, y: vm.levels[levelSelected].isSolved ? 530 : UIScreen.main.bounds.midY)
-                    .opacity(vm.levels[1].isSolved ? 1 : 0)
-                
-                LevelButton(selectedLevel: .constant(2), image: vm.levels[levelSelected].image, isSolved: vm.levels[levelSelected].isSolved)
-                    .position(x: vm.levels[levelSelected].isSolved ? 180 : UIScreen.main.bounds.midX, y: vm.levels[levelSelected].isSolved ? 400 : UIScreen.main.bounds.midY)
-                    .opacity(vm.levels[2].isSolved ? 1 : 0)
-            }
+            Levels
             
             ForEach(vm.levels, id:\.id) { level in
                 // TO DO: USE A SWITCH
@@ -151,6 +106,71 @@ struct MainView: View {
         }
     }
 }
+
+
+extension MainView {
+    private var Planets: some View {
+        Group {
+            Planet(heigth: 500, width: 500, color: colorOne)
+                .position(x: screen.minX+30, y: screen.maxY+100)
+                .offset(x: CGFloat(positionXFirstPlanet), y: CGFloat(positionYFirstPlanet))
+                .onAppear {
+                    withAnimation(.linear(duration: 15).repeatForever(autoreverses: true)) {
+                        positionXFirstPlanet += 20
+                        positionYFirstPlanet = -20
+                    }
+                }
+            
+            Planet(heigth: 150, width: 150, color: colorTwo)
+                .position(x: screen.minX, y: screen.maxY-200)
+                .offset(x: CGFloat(positionXSecondPlanet), y: CGFloat(positionYSecondPlanet))
+                .onAppear {
+                    withAnimation(.linear(duration: 10).repeatForever(autoreverses: true)) {
+                        positionXSecondPlanet += 30
+                    }
+                }
+            
+            Planet(heigth: 150, width: 150, color: colorThree)
+                .position(x: screen.maxX, y: screen.midY-100)
+                .offset(x: CGFloat(positionXThirdPlanet))
+                .onAppear {
+                    withAnimation(.linear(duration: 10).repeatForever(autoreverses: true)) {
+                        positionXThirdPlanet -= 40
+                    }
+                }
+            Planet(heigth: 40, width: 40, color: colorOne)
+                .position(x: 30, y: 200)
+            Planet(heigth: 20, width: 20, color: colorTwo)
+                .position(x: 230, y: 10)
+            Planet(heigth: 20, width: 20, color: colorThree)
+                .position(x: 100, y: 400)
+            Planet(heigth: 10, width: 10, color: colorThree)
+                .position(x: 30, y: 300)
+            Planet(heigth: 30, width: 30, color: colorOne)
+                .position(x: 300, y: 450)
+            Planet(heigth: 10, width: 10, color: colorOne)
+                .position(x: 330, y: 220)
+        }
+    }
+}
+
+extension MainView {
+    private var Levels: some View {
+        Group {
+            LevelButton(selectedLevel: .constant(0), image: vm.levels[levelSelected].image, isSolved: vm.levels[levelSelected].isSolved)
+                .position(x: vm.levels[levelSelected].isSolved ? 300 : UIScreen.main.bounds.midX, y: vm.levels[levelSelected].isSolved ? 650 : UIScreen.main.bounds.midY)
+            
+            LevelButton(selectedLevel: .constant(1), image: vm.levels[levelSelected].image, isSolved: vm.levels[levelSelected].isSolved)
+                .position(x: vm.levels[levelSelected].isSolved ? 200 : UIScreen.main.bounds.midX, y: vm.levels[levelSelected].isSolved ? 530 : UIScreen.main.bounds.midY)
+                .opacity(vm.levels[1].isSolved ? 1 : 0)
+            
+            LevelButton(selectedLevel: .constant(2), image: vm.levels[levelSelected].image, isSolved: vm.levels[levelSelected].isSolved)
+                .position(x: vm.levels[levelSelected].isSolved ? 180 : UIScreen.main.bounds.midX, y: vm.levels[levelSelected].isSolved ? 400 : UIScreen.main.bounds.midY)
+                .opacity(vm.levels[2].isSolved ? 1 : 0)
+        }
+    }
+}
+
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {

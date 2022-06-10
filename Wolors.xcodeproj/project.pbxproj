@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB2D9BDF28538BE700444C61 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D9BDE28538BE700444C61 /* GameLogic.swift */; };
+		AB2D9BE12853940800444C61 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D9BE02853940800444C61 /* MenuView.swift */; };
 		AB73D968284F975C009AD019 /* PuzzleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73D967284F975B009AD019 /* PuzzleView.swift */; };
 		AB73D96B284F9AF0009AD019 /* LevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73D96A284F9AF0009AD019 /* LevelModel.swift */; };
 		AB73D96D284F9B49009AD019 /* LevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73D96C284F9B49009AD019 /* LevelViewModel.swift */; };
@@ -49,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB2D9BDE28538BE700444C61 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
+		AB2D9BE02853940800444C61 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		AB73D967284F975B009AD019 /* PuzzleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleView.swift; sourceTree = "<group>"; };
 		AB73D96A284F9AF0009AD019 /* LevelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelModel.swift; sourceTree = "<group>"; };
 		AB73D96C284F9B49009AD019 /* LevelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 		AB73D969284F97B8009AD019 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AB2D9BE02853940800444C61 /* MenuView.swift */,
 				AB927FD3284E2191000FBCD2 /* MainView.swift */,
 				AB73D967284F975B009AD019 /* PuzzleView.swift */,
 				AB73D974284FD602009AD019 /* GuessView.swift */,
@@ -153,6 +158,7 @@
 			children = (
 				AB927FD1284E2191000FBCD2 /* WolorsApp.swift */,
 				AB7AC0292852849F005E116E /* ContentView.swift */,
+				AB2D9BDE28538BE700444C61 /* GameLogic.swift */,
 				AB73D96E284FA2B7009AD019 /* Models */,
 				AB73D96F284FA2C8009AD019 /* ViewModels */,
 				AB73D969284F97B8009AD019 /* Views */,
@@ -345,6 +351,7 @@
 				AB927FD4284E2191000FBCD2 /* MainView.swift in Sources */,
 				AB73D973284FCF68009AD019 /* TextField.swift in Sources */,
 				ABF89B90284FE95900633CB9 /* BackButtonView.swift in Sources */,
+				AB2D9BE12853940800444C61 /* MenuView.swift in Sources */,
 				AB928002284E3124000FBCD2 /* HudShape.swift in Sources */,
 				AB927FD2284E2191000FBCD2 /* WolorsApp.swift in Sources */,
 				AB7AC0282852812D005E116E /* GameState.swift in Sources */,
@@ -354,6 +361,7 @@
 				AB73D96B284F9AF0009AD019 /* LevelModel.swift in Sources */,
 				ABF89B922850E6E300633CB9 /* UserModel.swift in Sources */,
 				AB73D975284FD602009AD019 /* GuessView.swift in Sources */,
+				AB2D9BDF28538BE700444C61 /* GameLogic.swift in Sources */,
 				AB73D971284FC0B3009AD019 /* ResetRectView.swift in Sources */,
 				AB927FFD284E272A000FBCD2 /* Color.swift in Sources */,
 				AB928004284E38B6000FBCD2 /* LevelButton.swift in Sources */,
