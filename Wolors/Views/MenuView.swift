@@ -29,26 +29,19 @@ struct MenuView: View {
     
     let impactHeavy = UIImpactFeedbackGenerator(style: .heavy)
     
-    @Binding var opacity: Int
+    @Binding var opacity: Double
     
     var body: some View {
-        ZStack {
-            Color.theme.background.ignoresSafeArea()
+        VStack{
+            Spacer()
             
-            Planets
+            Image("Wolors")
             
-            VStack{
-                Spacer()
-                
-                Image("Wolors")
-                
-                UserName
-                
-                Spacer()
-                
-                PlayButton
-                
-            }
+            UserName
+            
+            Spacer()
+            
+            PlayButton
             
         }
     }
@@ -102,7 +95,7 @@ extension MenuView {
 
 extension MenuView {
     private var PlayButton: some View {
-        Button(action:{ withAnimation {opacity -= 1} ;impactHeavy.impactOccurred()}) {
+        Button(action:{ withAnimation(.spring()) {opacity -= 1} ;impactHeavy.impactOccurred()}) {
             RoundedRectangle(cornerRadius: 30)
                 .frame(width: 120, height: 60)
                 .foregroundColor(.theme.background)

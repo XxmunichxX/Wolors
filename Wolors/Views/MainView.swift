@@ -35,8 +35,7 @@ struct MainView: View {
     @State var levelXposition:CGFloat = 200
     @State var levelYposition:CGFloat = 200
     
-    @State var opacity = 1
-    
+    @State var opacity:Double = 1
     
     var body: some View {
         ZStack {
@@ -48,8 +47,10 @@ struct MainView: View {
                 MenuView(opacity: $opacity)
             }
             .zIndex(opacity)
+            .opacity(opacity == 0 ? 0 : 1)
             
             Levels
+                .opacity(opacity == 1 ? 0 : 1)
             
             ForEach(vm.levels, id:\.id) { level in
                 // TO DO: USE A SWITCH
@@ -99,6 +100,7 @@ struct MainView: View {
                     .foregroundColor(.theme.labels)
                 }
                 .padding()
+                .opacity(opacity == 1 ? 0 : 1)
                 
                 
                 Spacer()
