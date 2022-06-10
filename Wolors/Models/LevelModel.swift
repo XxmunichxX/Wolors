@@ -10,5 +10,6 @@ import Foundation
 struct Level:Identifiable {
     var id = UUID().uuidString
     var image: String = ""
+    var answers:[String] = [String]()
     var isSolved: Bool = false
 }

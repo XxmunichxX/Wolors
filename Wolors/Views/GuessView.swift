@@ -49,10 +49,13 @@ struct GuessView: View {
                         , alignment: .trailing
                     )
                     .onSubmit {
-                        if answer == vm.levels[vm.selectedLevel].image {
+                        if vm.levels[vm.selectedLevel].answers.contains(answer) {
                             showSuccessAlert.toggle()
+                            if let index = vm.levels[vm.selectedLevel].answers.firstIndex(of: answer) {
+                                vm.levels[vm.selectedLevel].answers.remove(at: index)
+                            }
                             answer = ""
-                        } else if user.lifes == 1 && answer != vm.levels[vm.selectedLevel].image {
+                        } else if user.lifes == 1 && !vm.levels[vm.selectedLevel].answers.contains(answer) {
                             showGameOver.toggle()
                             user.lifes -= 1
                             answer = ""

@@ -10,7 +10,7 @@ import Foundation
 class LevelViewModel: ObservableObject {
         
     @Published var levels: [Level] = [
-        Level(image: "Baloon", isSolved: false),
+        Level(image: "Baloon", answers: ["Baloons", "Love", "Sky", "Flying"], isSolved: false),
         Level(image: "Mother", isSolved: false),
         Level(image: "Ocean", isSolved: false),
         Level(image: "Tree", isSolved: false)
