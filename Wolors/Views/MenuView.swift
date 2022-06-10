@@ -39,9 +39,12 @@ struct MenuView: View {
             
             UserName
             
-            Spacer()
+           
             
             PlayButton
+                .padding(.top,70)
+            
+            Spacer()
             
         }
     }
