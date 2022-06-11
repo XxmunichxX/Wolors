@@ -106,6 +106,10 @@ struct MainView: View {
                 Spacer()
             }
         }
+        .onAppear {
+            // IF LIFES == 0
+            // SET GAME OVER
+        }
     }
 }
 

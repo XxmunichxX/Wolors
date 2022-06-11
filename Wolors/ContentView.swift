@@ -14,7 +14,15 @@ struct ContentView: View {
     @StateObject var gameLogic: GameLogic = GameLogic()
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        switch currentGameState {
+        case .mainScreen:
+            MainView()
+        case .playing:
+            MainView()
+        case .gameOver:
+            MainView()
+        }
     }
 }
 

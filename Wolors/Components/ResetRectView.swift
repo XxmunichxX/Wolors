@@ -34,6 +34,7 @@ struct ResetRectView: View {
                             YesNoButtons(label: "Yes", image: "heart.fill")
                         }
                         Spacer()
+                        // RETURN TO MENU
                         Button(action:{noPressed.toggle()}) {
                            YesNoButtons(label: "No", image: "x.circle.fill")
                         }

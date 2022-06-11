@@ -39,8 +39,6 @@ struct MenuView: View {
             
             UserName
             
-           
-            
             PlayButton
                 .padding(.top,70)
             

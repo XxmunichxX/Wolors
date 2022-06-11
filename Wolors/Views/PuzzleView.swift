@@ -70,7 +70,7 @@ struct PuzzleView: View {
                 HStack {
                     BackButtonView()
                         .padding(.trailing,9)
-                    HudShape(label: "\(user.coins)", image: "circle.circle")
+                    HudShape(label: "\(vm.levels[vm.selectedLevel].answers.count)", image: "questionmark")
                     HudShape(label: "\(user.lifes)", image: "heart.fill")
                     HudShape(label: "Hint", image: "star.fill")
                 }
@@ -112,17 +112,19 @@ struct PuzzleView: View {
                             user.lifes -= 1
                             if user.lifes == 0 {
                                 isGameOver = true
+                                // SET GAME OVER
                             }
                         }
                     }
-                    .alert("Woops! \nThe correct answer was \(vm.levels[vm.selectedLevel].image)", isPresented: $showAnswerAlert) {
+                   /* .alert("Woops! \nThe correct answer was \(vm.levels[vm.selectedLevel].image)", isPresented: $showAnswerAlert) {
                         Button("Got it 🥲") {
                             dismiss.callAsFunction()
                         }
-                    }
+                    } */
                     .alert("GAME OVER 😢 \nYou runned out of lifes", isPresented: $isGameOver) {
                         Button("Ok .. 🤬") {
                             dismiss.callAsFunction()
+                            // GO TO MENU
                         }
                     }
                     .alert("You did it! \nLevel Completed!", isPresented: $showNextLevelAlert) {

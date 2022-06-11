@@ -11,7 +11,7 @@ import SwiftUI
 struct WolorsApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            ContentView()
                 .environmentObject(User())
                 .environmentObject(LevelViewModel())
         }
