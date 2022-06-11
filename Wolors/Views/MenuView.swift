@@ -20,6 +20,10 @@ struct MenuView: View {
     
     let screen = UIScreen.main.bounds
     
+    func hideKeyboard() {
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        }
+    
     @State var positionXFirstPlanet = 0
     @State var positionXSecondPlanet = 0
     @State var positionXThirdPlanet = 0
@@ -96,7 +100,7 @@ extension MenuView {
 
 extension MenuView {
     private var PlayButton: some View {
-        Button(action:{ withAnimation(.spring()) {opacity -= 1} ;impactHeavy.impactOccurred()}) {
+        Button(action:{ withAnimation(.spring()) {opacity -= 1} ;impactHeavy.impactOccurred();hideKeyboard()}) {
             RoundedRectangle(cornerRadius: 30)
                 .frame(width: 120, height: 60)
                 .foregroundColor(.theme.background)

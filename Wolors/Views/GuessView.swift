@@ -33,6 +33,7 @@ struct GuessView: View {
             .shadow(color: .theme.darkShadow, radius: 3, x: 4, y: 4)
             .overlay {
                 TextField("What is it?", text: $answer, onCommit: hideKeyboard)
+                    .textInputAutocapitalization(.words)
                     .foregroundColor(.theme.labels)
                     .focused($keyboardFocused)
                     .padding()
@@ -62,6 +63,7 @@ struct GuessView: View {
                             answer = ""
                         } else {
                             showWrongAlert.toggle()
+                            print(answer)
                             answer = ""
                         }
                     }

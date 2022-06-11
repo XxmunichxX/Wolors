@@ -24,12 +24,16 @@ struct PuzzleView: View {
     @State var tipsShowed = false
     @State var keyboardTrigger = false
     @State var isGameOver = false
-    @State var tipsOffset: CGFloat = 500
+    @State var tipsOffset: CGFloat = UIScreen.main.bounds.maxY+100
     
     
     @Binding var image: String
     
     var screen = UIScreen.main.bounds
+    
+    func hideKeyboard() {
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        }
     
     var body: some View {
         ZStack {
@@ -37,8 +41,8 @@ struct PuzzleView: View {
             Image(image)
                 .resizable()
                 .scaledToFill()
+                .ignoresSafeArea()
             // .blur(radius: blurOffset)
-                .offset(y: -10)
             // OLD MECHS
             /*    .onLongPressGesture(minimumDuration: 0.25) { (isPressing) in
              if isPressing {
@@ -65,10 +69,6 @@ struct PuzzleView: View {
              }
              } */
             
-            /* Button(action: {vm.selectedLevel += 1}) {
-             Text("INCREASE LEVELS")
-             } */
-            
             TipsView()
                 .offset(y: tipsOffset)
             
@@ -83,7 +83,7 @@ struct PuzzleView: View {
                                 if tipsShowed {
                                     tipsOffset = 0
                                 } else {
-                                    tipsOffset = 500
+                                    tipsOffset = UIScreen.main.bounds.maxY+100
                                 }
                             }
                         }
@@ -147,6 +147,7 @@ struct PuzzleView: View {
                         Button("Let's go!"){
                             withAnimation {
                                 dismiss.callAsFunction()
+                                hideKeyboard()
                             }
                             vm.guessedWords.removeAll()
                             
