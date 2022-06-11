@@ -12,6 +12,8 @@ struct MainView: View {
     @EnvironmentObject var vm: LevelViewModel
     @EnvironmentObject var user: User
     
+    @Binding var currentGameState: GameState
+    
     // CREATE A CLASS TO STORE THESE PROPERTIES
     
     let colorOne: LinearGradient = LinearGradient(colors: [.theme.bigPlanetFirst, .theme.bigPlanetSecond], startPoint: .leading, endPoint: .trailing)
@@ -27,11 +29,14 @@ struct MainView: View {
     @State var positionXThirdPlanet = 0
     @State var positionYFirstPlanet = 0
     @State var positionYSecondPlanet = 0
+    
     @State var resetOffset: CGFloat = UIScreen.main.bounds.maxY
+    
     @State var resetYes = false
     @State var resetNo = false
     
     @State var levelSelected = 0
+    
     @State var levelXposition:CGFloat = 200
     @State var levelYposition:CGFloat = 200
     
@@ -47,10 +52,10 @@ struct MainView: View {
                 MenuView(opacity: $opacity)
             }
             .zIndex(opacity)
-            .opacity(opacity == 0 ? 0 : 1)
+            .opacity(opacity == 0 && !resetNo ? 0 : 1)
             
             Levels
-                .opacity(opacity == 1 ? 0 : 1)
+                .opacity(opacity == 1 || resetNo ? 0 : 1)
             
             ForEach(vm.levels, id:\.id) { level in
                 // TO DO: USE A SWITCH
@@ -68,7 +73,7 @@ struct MainView: View {
             
             
             ResetRectView(yesPressed: $resetYes, noPressed: $resetNo)
-                .offset(y: resetOffset)
+                .offset(y: resetOffset )
                 .onChange(of: user.lifes) { _ in
                     if user.lifes == 0 {
                         DispatchQueue.main.asyncAfter(deadline: .now()+2) {
@@ -80,6 +85,12 @@ struct MainView: View {
                         withAnimation(.spring(response: 1, dampingFraction: 1, blendDuration: 1)){
                             resetOffset = UIScreen.main.bounds.maxY
                         }
+                    }
+                }
+                .onChange(of: resetNo) { newValue in
+                    withAnimation {
+                        resetOffset = UIScreen.main.bounds.maxY
+                        opacity = 1
                     }
                 }
             
@@ -104,14 +115,12 @@ struct MainView: View {
                 
                 
                 Spacer()
+                
             }
-        }
-        .onAppear {
-            // IF LIFES == 0
-            // SET GAME OVER
         }
     }
 }
+
 
 
 extension MainView {
@@ -181,8 +190,8 @@ extension MainView {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            MainView()
-            MainView().preferredColorScheme(.dark)
+            MainView(currentGameState: .constant( .mainScreen))
+            MainView(currentGameState: .constant( .mainScreen)).preferredColorScheme(.dark)
         }
         .environmentObject(User())
         .environmentObject(LevelViewModel())

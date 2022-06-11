@@ -14,13 +14,12 @@ class GameLogic: ObservableObject {
     
     @EnvironmentObject var user: User
     
-    @Published var sessionDuration: TimeInterval = 0
     @Published var isGameOver: Bool = false
     
     func setUpGame() {
         
-        self.currentScore = 0
-        self.sessionDuration = 0
+        //LIFES = 3
+        // NAME = ""
         
         self.isGameOver = false
     }
@@ -31,9 +30,6 @@ class GameLogic: ObservableObject {
         self.currentScore = self.currentScore + points
     }
     
-    func increaseSessionTime(by timeIncrement: TimeInterval) {
-        self.sessionDuration = self.sessionDuration + timeIncrement
-    }
     
     func restartGame() {
         // if lifes == 0

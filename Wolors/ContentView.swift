@@ -17,11 +17,11 @@ struct ContentView: View {
         
         switch currentGameState {
         case .mainScreen:
-            MainView()
+            MainView(currentGameState: $currentGameState)
         case .playing:
-            MainView()
+            MainView(currentGameState: $currentGameState)
         case .gameOver:
-            MainView()
+            MainView(currentGameState: $currentGameState)
         }
     }
 }
@@ -29,5 +29,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(LevelViewModel())
+            .environmentObject(User())
     }
 }
