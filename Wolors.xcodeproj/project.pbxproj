@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AB2D9BDF28538BE700444C61 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D9BDE28538BE700444C61 /* GameLogic.swift */; };
 		AB2D9BE12853940800444C61 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D9BE02853940800444C61 /* MenuView.swift */; };
+		AB5043CC2854AF9A00AE15C1 /* TipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5043CB2854AF9A00AE15C1 /* TipsView.swift */; };
 		AB73D968284F975C009AD019 /* PuzzleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73D967284F975B009AD019 /* PuzzleView.swift */; };
 		AB73D96B284F9AF0009AD019 /* LevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73D96A284F9AF0009AD019 /* LevelModel.swift */; };
 		AB73D96D284F9B49009AD019 /* LevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73D96C284F9B49009AD019 /* LevelViewModel.swift */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		AB2D9BDE28538BE700444C61 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
 		AB2D9BE02853940800444C61 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		AB5043CB2854AF9A00AE15C1 /* TipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsView.swift; sourceTree = "<group>"; };
 		AB73D967284F975B009AD019 /* PuzzleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleView.swift; sourceTree = "<group>"; };
 		AB73D96A284F9AF0009AD019 /* LevelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelModel.swift; sourceTree = "<group>"; };
 		AB73D96C284F9B49009AD019 /* LevelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				AB928001284E3123000FBCD2 /* HudShape.swift */,
 				ABF89B8F284FE95900633CB9 /* BackButtonView.swift */,
 				AB928003284E38B6000FBCD2 /* LevelButton.swift */,
+				AB5043CB2854AF9A00AE15C1 /* TipsView.swift */,
 				AB73D970284FC0B3009AD019 /* ResetRectView.swift */,
 				ABF89B932851333800633CB9 /* YesNoButtons.swift */,
 			);
@@ -348,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB5043CC2854AF9A00AE15C1 /* TipsView.swift in Sources */,
 				AB927FD4284E2191000FBCD2 /* MainView.swift in Sources */,
 				AB73D973284FCF68009AD019 /* TextField.swift in Sources */,
 				ABF89B90284FE95900633CB9 /* BackButtonView.swift in Sources */,

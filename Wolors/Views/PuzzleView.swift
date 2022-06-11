@@ -21,8 +21,11 @@ struct PuzzleView: View {
     @State var showWrongAlert = false
     @State var showAnswerAlert = false
     @State var showNextLevelAlert = false
+    @State var tipsShowed = false
     @State var keyboardTrigger = false
     @State var isGameOver = false
+    @State var tipsOffset: CGFloat = 500
+    
     
     @Binding var image: String
     
@@ -66,11 +69,24 @@ struct PuzzleView: View {
              Text("INCREASE LEVELS")
              } */
             
+            TipsView()
+                .offset(y: tipsOffset)
+            
             VStack {
                 HStack {
                     BackButtonView()
                         .padding(.trailing,9)
                     HudShape(label: "\(vm.levels[vm.selectedLevel].answers.count)", image: "questionmark")
+                        .onTapGesture {
+                            tipsShowed.toggle()
+                            withAnimation {
+                                if tipsShowed {
+                                    tipsOffset = 0
+                                } else {
+                                    tipsOffset = 500
+                                }
+                            }
+                        }
                     HudShape(label: "\(user.lifes)", image: "heart.fill")
                     HudShape(label: "Hint", image: "star.fill")
                 }
@@ -132,6 +148,7 @@ struct PuzzleView: View {
                             withAnimation {
                                 dismiss.callAsFunction()
                             }
+                            vm.guessedWords.removeAll()
                             
                         }
                     }

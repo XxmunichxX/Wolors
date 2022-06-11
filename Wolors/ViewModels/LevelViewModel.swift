@@ -16,6 +16,8 @@ class LevelViewModel: ObservableObject {
         Level(image: "Tree", answers: ["Tree", "Sun", "Savana", "Hot"], isSolved: false)
             ]
     
+    @Published var guessedWords:[String] = [String]()
+    
     @Published var solvedLevels = [Level]()
     
     @Published var selectedLevel = 0

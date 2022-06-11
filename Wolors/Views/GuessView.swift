@@ -54,6 +54,7 @@ struct GuessView: View {
                             if let index = vm.levels[vm.selectedLevel].answers.firstIndex(of: answer) {
                                 vm.levels[vm.selectedLevel].answers.remove(at: index)
                             }
+                            vm.guessedWords.append(answer)
                             answer = ""
                         } else if user.lifes == 1 && !vm.levels[vm.selectedLevel].answers.contains(answer) {
                             showGameOver.toggle()
