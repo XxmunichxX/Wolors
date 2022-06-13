@@ -9,13 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var currentGameState: GameState = .mainScreen
+    @State var currentGameState: GameState = .onboarding
     
     @StateObject var gameLogic: GameLogic = GameLogic()
     
     var body: some View {
         
         switch currentGameState {
+        case .onboarding:
+            OnBoardView()
         case .mainScreen:
             MainView(currentGameState: $currentGameState)
         case .playing:

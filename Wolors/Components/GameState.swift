@@ -8,6 +8,7 @@
 import Foundation
 
 enum GameState {
+    case onboarding
     case mainScreen
     case playing
     case gameOver

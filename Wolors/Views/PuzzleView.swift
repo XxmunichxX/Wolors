@@ -32,8 +32,8 @@ struct PuzzleView: View {
     var screen = UIScreen.main.bounds
     
     func hideKeyboard() {
-            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-        }
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
     
     var body: some View {
         ZStack {
@@ -79,7 +79,7 @@ struct PuzzleView: View {
                     HudShape(label: "\(vm.levels[vm.selectedLevel].answers.count)", image: "questionmark")
                         .onTapGesture {
                             tipsShowed.toggle()
-                            withAnimation {
+                            withAnimation(.spring()) {
                                 if tipsShowed {
                                     tipsOffset = 0
                                 } else {
@@ -96,6 +96,11 @@ struct PuzzleView: View {
                 
                 GuessView(showSuccessAlert: $showSuccessAlert, showWrongAlert: $showWrongAlert, showGameOver: $isGameOver, keyboardTrigger: $keyboardTrigger)
                     .offset(y: guessOffset)
+                    .onTapGesture {
+                        withAnimation {
+                            tipsOffset = UIScreen.main.bounds.maxY+100
+                        }
+                    }
                     .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification), perform: { _ in
                         withAnimation {
                             if guessOffset == -50 {
@@ -132,11 +137,11 @@ struct PuzzleView: View {
                             }
                         }
                     }
-                   /* .alert("Woops! \nThe correct answer was \(vm.levels[vm.selectedLevel].image)", isPresented: $showAnswerAlert) {
-                        Button("Got it 🥲") {
-                            dismiss.callAsFunction()
-                        }
-                    } */
+                /* .alert("Woops! \nThe correct answer was \(vm.levels[vm.selectedLevel].image)", isPresented: $showAnswerAlert) {
+                 Button("Got it 🥲") {
+                 dismiss.callAsFunction()
+                 }
+                 } */
                     .alert("GAME OVER 😢 \nYou runned out of lifes", isPresented: $isGameOver) {
                         Button("Ok .. 🤬") {
                             dismiss.callAsFunction()

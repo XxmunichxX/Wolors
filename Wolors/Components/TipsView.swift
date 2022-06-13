@@ -15,7 +15,7 @@ struct TipsView: View {
         RoundedRectangle(cornerRadius: 20)
             .fill(Color.theme.background)
             .frame(width: 300, height: 180)
-            .shadow(color: .theme.darkShadow, radius: 3, x: 8, y: 8)
+           // .shadow(color: .theme.darkShadow, radius: 3, x: 8, y: 8)
             .overlay {
                 VStack {
                     Text("You have to guess \(vm.levels[vm.selectedLevel].answers.count) words")

@@ -33,7 +33,6 @@ struct GuessView: View {
             .shadow(color: .theme.darkShadow, radius: 3, x: 4, y: 4)
             .overlay {
                 TextField("What is it?", text: $answer, onCommit: hideKeyboard)
-                    .textInputAutocapitalization(.words)
                     .foregroundColor(.theme.labels)
                     .focused($keyboardFocused)
                     .padding()
@@ -50,20 +49,19 @@ struct GuessView: View {
                         , alignment: .trailing
                     )
                     .onSubmit {
-                        if vm.levels[vm.selectedLevel].answers.contains(answer) {
+                        if vm.levels[vm.selectedLevel].answers.contains(answer.capitalized) {
                             showSuccessAlert.toggle()
-                            if let index = vm.levels[vm.selectedLevel].answers.firstIndex(of: answer) {
+                            if let index = vm.levels[vm.selectedLevel].answers.firstIndex(of: answer.capitalized) {
                                 vm.levels[vm.selectedLevel].answers.remove(at: index)
                             }
-                            vm.guessedWords.append(answer)
+                            vm.guessedWords.append(answer.capitalized)
                             answer = ""
-                        } else if user.lifes == 1 && !vm.levels[vm.selectedLevel].answers.contains(answer) {
+                        } else if user.lifes == 1 && !vm.levels[vm.selectedLevel].answers.contains(answer.capitalized) {
                             showGameOver.toggle()
                             user.lifes -= 1
                             answer = ""
                         } else {
                             showWrongAlert.toggle()
-                            print(answer)
                             answer = ""
                         }
                     }

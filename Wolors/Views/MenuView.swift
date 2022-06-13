@@ -39,7 +39,7 @@ struct MenuView: View {
         VStack{
             Spacer()
             
-            Image("Wolors")
+            Image(colorScheme == .dark ? "WolorsDM" : "Wolors")
             
             UserName
             
