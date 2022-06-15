@@ -29,11 +29,14 @@ struct SettingsView: View {
                     Text("Settings")
                         .bold()
                     Spacer()
+                    HStack {
+                        Text("Username:")
+                        Spacer()
+                    }
                     TextField(user.name, text: $user.name)
                     Divider()
                     Toggle("Music", isOn: $musicOn)
                     Divider()
-                    Toggle("Dark Mode", isOn: $darkModeOn)
                     Spacer()
                     
                 }
@@ -42,9 +45,13 @@ struct SettingsView: View {
             }
             .onChange(of: musicOn) { _ in
                 if musicOn {
+                    musicOn = false
                     AudioManager.shared.stopSound()
-                } else {
+                    print(musicOn)
+                } else if !musicOn {
+                    musicOn = true
                     AudioManager.shared.startBackGroundMusic()
+                    print("Else if: \(musicOn)")
                 }
             }
     }

@@ -19,6 +19,8 @@ struct LevelButton: View {
     
     @Binding var selectedLevel: Int
     
+    let screen = UIScreen.main.bounds
+    
     var image: String
     var isSolved:Bool
     
@@ -52,6 +54,7 @@ struct LevelButton: View {
                     .onChanged({ value in
                         withAnimation(.spring()) {
                             if isSolved {
+                                
                                 offset = value.translation
                             }
                         }

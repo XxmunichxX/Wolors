@@ -48,6 +48,8 @@ struct MainView: View {
     @State var showSettings = false
     @State var settingsOffset: CGFloat = UIScreen.main.bounds.maxY+100
     
+    @State var moreToComeOffset: CGFloat = UIScreen.main.bounds.maxY+100
+    
     var body: some View {
         ZStack {
             Color.theme.background.ignoresSafeArea()
@@ -80,6 +82,11 @@ struct MainView: View {
             SettingsView()
                 .offset(y: showSettings ? 0 : settingsOffset)
             
+            MoreToCome
+                .offset(y: withAnimation(.spring()) {
+                    vm.selectedLevel > 0 ? 0 : moreToComeOffset
+                })
+            
             
             ResetRectView(yesPressed: $resetYes, noPressed: $resetNo)
                 .offset(y: resetOffset )
@@ -105,7 +112,7 @@ struct MainView: View {
             
             VStack {
                 HStack {
-                   // HudShape(label: "\(user.coins)", image: "circle.circle")
+                    // HudShape(label: "\(user.coins)", image: "circle.circle")
                     HudShape(label: "\(user.lifes)", image: "heart.fill")
                     Spacer()
                     Group {
@@ -194,6 +201,31 @@ extension MainView {
         }
     }
 }
+
+extension MainView {
+    private var MoreToCome: some View {
+        RoundedRectangle(cornerRadius: 20)
+            .fill(Color.theme.background)
+            .frame(width: 300, height: 380)
+            .shadow(color: .theme.darkShadow, radius: 3, x: 4, y: 4)
+            .shadow(color: .theme.lightShadow, radius: 3, x: -4, y: -4)
+            .overlay {
+                VStack {
+                    Text("Thank you for playing! \n\nMore levels are coming soon!")
+                        .bold()
+                        .font(.title)
+                        .foregroundColor(.theme.labels)
+                        .multilineTextAlignment(.center)
+                        .padding()
+                    Image(systemName: "heart.fill")
+                        .foregroundColor(.theme.labels)
+                        .font(.system(size: 50))
+                        .padding()
+                }
+            }
+    }
+}
+
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
