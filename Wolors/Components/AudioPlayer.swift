@@ -9,10 +9,11 @@ import Foundation
 import AVKit
 
 class AudioManager {
-    
+
     static let shared = AudioManager()
     
     var player: AVAudioPlayer?
+    var secondPlayer: AVAudioPlayer?
     
     func startBackGroundMusic() {
         guard let url = Bundle.main.url(forResource: "soundTrack", withExtension: "mp3") else {
@@ -36,11 +37,16 @@ class AudioManager {
         }
         
         do {
-            player = try AVAudioPlayer(contentsOf: url)
-           
-            player?.play()
+            secondPlayer = try AVAudioPlayer(contentsOf: url)
+            secondPlayer?.play()
+            
         } catch {
             print("Fail to inizialize player", error)
         }
     }
+    
+    func stopSound() {
+        player?.stop()
+    }
+    
 }

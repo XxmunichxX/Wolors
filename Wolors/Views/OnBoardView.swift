@@ -97,6 +97,7 @@ extension OnBoardView {
 extension OnBoardView {
     private var PlayButton: some View {
         Button(action: {showMenu.toggle();
+            AudioManager.shared.startPlayer(track: "softpop");
             impactHeavy.impactOccurred();
         }){
             RoundedRectangle(cornerRadius: 30)

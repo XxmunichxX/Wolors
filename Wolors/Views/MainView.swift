@@ -45,6 +45,9 @@ struct MainView: View {
     
     @State var opacity:Double = 1
     
+    @State var showSettings = false
+    @State var settingsOffset: CGFloat = UIScreen.main.bounds.maxY+100
+    
     var body: some View {
         ZStack {
             Color.theme.background.ignoresSafeArea()
@@ -73,6 +76,9 @@ struct MainView: View {
                         .position(x: 120, y: 300)
                 }
             }
+            
+            SettingsView()
+                .offset(y: showSettings ? 0 : settingsOffset)
             
             
             ResetRectView(yesPressed: $resetYes, noPressed: $resetNo)
@@ -106,7 +112,9 @@ struct MainView: View {
                         Button(action: {}){
                             Image(systemName: "star.circle")
                         }
-                        Button(action: {}) {
+                        Button(action: {withAnimation(.spring()){ showSettings.toggle()};
+                            AudioManager.shared.startPlayer(track: "softpop")
+                        }) {
                             Image(systemName: "gearshape.fill")
                         }
                     }

@@ -97,6 +97,7 @@ struct PuzzleView: View {
                     HudShape(label: "\(user.lifes)", image: "heart.fill")
                     CustomHudShape
                         .onTapGesture {
+                            AudioManager.shared.startPlayer(track: "softpop")
                             if user.lifes > 1 {
                                 hintsShowed.toggle()
                                 withAnimation(.spring()) {

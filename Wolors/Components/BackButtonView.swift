@@ -16,6 +16,7 @@ struct BackButtonView: View {
     
     var body: some View {
         Button(action: {dismiss.callAsFunction();
+            AudioManager.shared.startPlayer(track: "softpop");
             impactHeavy.impactOccurred();
         }) {
             Circle()

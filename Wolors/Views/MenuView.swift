@@ -102,6 +102,7 @@ extension MenuView {
     private var PlayButton: some View {
         Button(action:{ withAnimation(.spring()) {opacity -= 1};
             impactHeavy.impactOccurred();
+            AudioManager.shared.startPlayer(track: "softpop");
             hideKeyboard()}) {
             RoundedRectangle(cornerRadius: 30)
                 .frame(width: 120, height: 60)

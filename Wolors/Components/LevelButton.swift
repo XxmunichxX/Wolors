@@ -40,6 +40,7 @@ struct LevelButton: View {
                     .offset(offset)
             }
             .onTapGesture {
+                AudioManager.shared.startPlayer(track: "softpop")
                 let impactHeavy = UIImpactFeedbackGenerator(style: .heavy)
                 impactHeavy.impactOccurred()
                 if !isSolved {
