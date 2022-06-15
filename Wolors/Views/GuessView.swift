@@ -61,9 +61,9 @@ struct GuessView: View {
                         } else if vm.guessedWords.contains(answer.capitalized) {
                             alreadyGuessed.toggle()
                             answer = ""
-                        } else if user.lifes == 1 && !vm.levels[vm.selectedLevel].answers.contains(answer.capitalized) {
+                        } else if user.user.lifes == 1 && !vm.levels[vm.selectedLevel].answers.contains(answer.capitalized) {
                             showGameOver.toggle()
-                            user.lifes -= 1
+                            user.user.lifes -= 1
                             answer = ""
                         } else {
                             showWrongAlert.toggle()

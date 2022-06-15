@@ -31,7 +31,7 @@ struct ResetRectView: View {
                     Spacer()
                     HStack {
                         Button(action: {yesPressed.toggle();
-                            user.lifes = 3;
+                            user.user.lifes = 3;
                         }) {
                             YesNoButtons(label: "Yes", image: "heart.fill")
                         }

@@ -24,8 +24,8 @@ class LevelViewModel: ObservableObject {
     
     @Published var selectedLevel = 0
     
-    func addLevel(level: Level) {
-        solvedLevels.append(level)
+    func saveReachedLevel() {
+        
     }
 
 }

@@ -99,11 +99,11 @@ struct PuzzleView: View {
                             }
                         }
                     
-                    HudShape(label: "\(user.lifes)", image: "heart.fill")
+                    HudShape(label: "\(user.user.lifes)", image: "heart.fill")
                     CustomHudShape
                         .onTapGesture {
                             AudioManager.shared.startPlayer(track: "softpop")
-                            if user.lifes > 1 {
+                            if user.user.lifes > 1 {
                                 hintsShowed.toggle()
                                 withAnimation(.spring()) {
                                     if hintsShowed {
@@ -113,9 +113,9 @@ struct PuzzleView: View {
                                     }
                                 }
                                 if hintsShowed {
-                                    user.lifes -= 1
+                                    user.user.lifes -= 1
                                 }
-                            } else if user.lifes == 1 && hintsShowed {
+                            } else if user.user.lifes == 1 && hintsShowed {
                                 hintsShowed.toggle()
                                 withAnimation {
                                     hintsOffset = UIScreen.main.bounds.maxY+100
@@ -155,7 +155,7 @@ struct PuzzleView: View {
                                 vm.selectedLevel += 1
                                 showNextLevelAlert.toggle()
                             }
-                            user.lifes += 1
+                            user.user.lifes += 1
                             /* withAnimation(.linear(duration: 2)) {
                              blurOffset = 0
                              } */
@@ -164,8 +164,8 @@ struct PuzzleView: View {
                     }
                     .alert("OH NO! 😩 \nThe answer is incorrect!", isPresented: $showWrongAlert) {
                         Button("Let's try again!") {
-                            user.lifes -= 1
-                            if user.lifes == 0 {
+                            user.user.lifes -= 1
+                            if user.user.lifes == 0 {
                                 isGameOver = true
                                 // SET GAME OVER
                             }

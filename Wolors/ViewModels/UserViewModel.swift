@@ -12,7 +12,9 @@ class UserViewModel: ObservableObject {
     @Published var user = UserModel()
     
     func saveUser() {
-        
+        if let encodedData = try? JSONEncoder().encode(user) {
+            UserDefaults.standard.set(user, forKey: "User")
+        }
     }
     
 }

@@ -104,8 +104,8 @@ struct MainView: View {
             
             ResetRectView(yesPressed: $resetYes, noPressed: $resetNo)
                 .offset(y: resetOffset )
-                .onChange(of: user.lifes) { _ in
-                    if user.lifes == 0 {
+                .onChange(of: user.user.lifes) { _ in
+                    if user.user.lifes == 0 {
                         DispatchQueue.main.asyncAfter(deadline: .now()+2) {
                             withAnimation(.spring(response: 1, dampingFraction: 1, blendDuration: 1)) {
                                 resetOffset = 0
@@ -128,7 +128,7 @@ struct MainView: View {
             
             VStack {
                 HStack {
-                    HudShape(label: "\(user.lifes)", image: "heart.fill")
+                    HudShape(label: "\(user.user.lifes)", image: "heart.fill")
                     Spacer()
                     Group {
                         Button(action: {}){
