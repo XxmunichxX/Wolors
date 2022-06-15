@@ -55,6 +55,7 @@ struct GuessView: View {
                                 vm.levels[vm.selectedLevel].answers.remove(at: index)
                             }
                             vm.guessedWords.append(answer.capitalized)
+                            print(vm.guessedWords)
                             answer = ""
                         } else if user.lifes == 1 && !vm.levels[vm.selectedLevel].answers.contains(answer.capitalized) {
                             showGameOver.toggle()

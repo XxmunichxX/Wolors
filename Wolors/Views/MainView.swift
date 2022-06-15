@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct MainView: View {
     
@@ -14,8 +15,6 @@ struct MainView: View {
     
     @Binding var currentGameState: GameState
     
-    // CREATE A CLASS TO STORE THESE PROPERTIES
-    
     let colorOne: LinearGradient = LinearGradient(colors: [.theme.bigPlanetFirst, .theme.bigPlanetSecond], startPoint: .leading, endPoint: .trailing)
     
     let colorTwo: LinearGradient = LinearGradient(colors: [.indigo, .purple], startPoint: .leading, endPoint: .trailing)
@@ -23,6 +22,10 @@ struct MainView: View {
     let colorThree: LinearGradient = LinearGradient(colors: [.indigo.opacity(0.7), .blue.opacity(0.7)], startPoint: .leading, endPoint: .trailing)
     
     let screen = UIScreen.main.bounds
+    
+    @State var player: AVAudioPlayer?
+    
+    @State var music: AVAudioPlayer!
     
     @State var positionXFirstPlanet = 0
     @State var positionXSecondPlanet = 0
@@ -96,7 +99,7 @@ struct MainView: View {
             
             VStack {
                 HStack {
-                    HudShape(label: "\(user.coins)", image: "circle.circle")
+                   // HudShape(label: "\(user.coins)", image: "circle.circle")
                     HudShape(label: "\(user.lifes)", image: "heart.fill")
                     Spacer()
                     Group {
@@ -112,8 +115,6 @@ struct MainView: View {
                 }
                 .padding()
                 .opacity(opacity == 1 ? 0 : 1)
-                
-                
                 Spacer()
                 
             }
@@ -185,7 +186,6 @@ extension MainView {
         }
     }
 }
-
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {

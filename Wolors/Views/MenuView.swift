@@ -100,7 +100,9 @@ extension MenuView {
 
 extension MenuView {
     private var PlayButton: some View {
-        Button(action:{ withAnimation(.spring()) {opacity -= 1} ;impactHeavy.impactOccurred();hideKeyboard()}) {
+        Button(action:{ withAnimation(.spring()) {opacity -= 1};
+            impactHeavy.impactOccurred();
+            hideKeyboard()}) {
             RoundedRectangle(cornerRadius: 30)
                 .frame(width: 120, height: 60)
                 .foregroundColor(.theme.background)

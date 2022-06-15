@@ -30,12 +30,15 @@ struct ResetRectView: View {
                         .padding(.vertical,10)
                     Spacer()
                     HStack {
-                        Button(action: {yesPressed.toggle(); user.lifes = 3}) {
+                        Button(action: {yesPressed.toggle();
+                            user.lifes = 3;
+                        }) {
                             YesNoButtons(label: "Yes", image: "heart.fill")
                         }
                         Spacer()
                         // RETURN TO MENU
-                        Button(action:{noPressed.toggle()}) {
+                        Button(action:{noPressed.toggle();
+                        }) {
                            YesNoButtons(label: "No", image: "x.circle.fill")
                         }
                     }

@@ -7,9 +7,10 @@
 
 import Foundation
 
-struct Level:Identifiable {
+struct Level:Identifiable, Hashable {
     var id = UUID().uuidString
     var image: String = ""
     var answers:[String] = [String]()
+    var hints:[String] = [String]()
     var isSolved: Bool = false
 }

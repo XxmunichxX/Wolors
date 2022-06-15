@@ -42,6 +42,9 @@ struct OnBoardView: View {
         .fullScreenCover(isPresented: $showMenu) {
             MainView(currentGameState: .constant(.mainScreen))
         }
+        .onAppear {
+            AudioManager.shared.startBackGroundMusic()
+        }
     }
 }
 
@@ -93,7 +96,9 @@ extension OnBoardView {
 
 extension OnBoardView {
     private var PlayButton: some View {
-        Button(action: {showMenu.toggle(); impactHeavy.impactOccurred()}){
+        Button(action: {showMenu.toggle();
+            impactHeavy.impactOccurred();
+        }){
             RoundedRectangle(cornerRadius: 30)
                 .frame(width: 190, height: 55)
                 .foregroundColor(.theme.background)

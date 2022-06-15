@@ -15,7 +15,9 @@ struct BackButtonView: View {
     let impactHeavy = UIImpactFeedbackGenerator(style: .heavy)
     
     var body: some View {
-        Button(action: {dismiss.callAsFunction(); impactHeavy.impactOccurred()}) {
+        Button(action: {dismiss.callAsFunction();
+            impactHeavy.impactOccurred();
+        }) {
             Circle()
                 .frame(width: 25, height: 25)
                 .foregroundColor(.theme.hud)

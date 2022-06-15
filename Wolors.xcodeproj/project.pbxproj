@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB21B7742859269F00A4A3A4 /* soundTrack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB21B7732859269F00A4A3A4 /* soundTrack.mp3 */; };
+		AB21B7762859289900A4A3A4 /* softpop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB21B7752859289800A4A3A4 /* softpop.mp3 */; };
 		AB2D9BDF28538BE700444C61 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D9BDE28538BE700444C61 /* GameLogic.swift */; };
 		AB2D9BE12853940800444C61 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D9BE02853940800444C61 /* MenuView.swift */; };
 		AB3F2C0C285776BA00DD8632 /* OnBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3F2C0B285776BA00DD8632 /* OnBoardView.swift */; };
@@ -33,6 +35,8 @@
 		ABF89B90284FE95900633CB9 /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF89B8F284FE95900633CB9 /* BackButtonView.swift */; };
 		ABF89B922850E6E300633CB9 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF89B912850E6E300633CB9 /* UserModel.swift */; };
 		ABF89B942851333800633CB9 /* YesNoButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF89B932851333800633CB9 /* YesNoButtons.swift */; };
+		ABFF60582857F52100DE4708 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFF60572857F52100DE4708 /* AudioPlayer.swift */; };
+		ABFF605A2858B9F800DE4708 /* HintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFF60592858B9F800DE4708 /* HintView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB21B7732859269F00A4A3A4 /* soundTrack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = soundTrack.mp3; sourceTree = "<group>"; };
+		AB21B7752859289800A4A3A4 /* softpop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = softpop.mp3; sourceTree = "<group>"; };
 		AB2D9BDE28538BE700444C61 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
 		AB2D9BE02853940800444C61 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		AB3F2C0B285776BA00DD8632 /* OnBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardView.swift; sourceTree = "<group>"; };
@@ -82,6 +88,8 @@
 		ABF89B8F284FE95900633CB9 /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
 		ABF89B912850E6E300633CB9 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		ABF89B932851333800633CB9 /* YesNoButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YesNoButtons.swift; sourceTree = "<group>"; };
+		ABFF60572857F52100DE4708 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		ABFF60592858B9F800DE4708 /* HintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +178,8 @@
 				AB927FFE284E28C8000FBCD2 /* Components */,
 				AB927FFB284E2718000FBCD2 /* Extensions */,
 				AB927FD5284E2193000FBCD2 /* Assets.xcassets */,
+				AB21B7732859269F00A4A3A4 /* soundTrack.mp3 */,
+				AB21B7752859289800A4A3A4 /* softpop.mp3 */,
 				AB927FD7284E2193000FBCD2 /* Preview Content */,
 			);
 			path = Wolors;
@@ -212,8 +222,10 @@
 		AB927FFE284E28C8000FBCD2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				ABFF60572857F52100DE4708 /* AudioPlayer.swift */,
 				AB7AC0272852812D005E116E /* GameState.swift */,
 				AB927FFF284E28DD000FBCD2 /* Planet.swift */,
+				ABFF60592858B9F800DE4708 /* HintView.swift */,
 				AB928001284E3123000FBCD2 /* HudShape.swift */,
 				ABF89B8F284FE95900633CB9 /* BackButtonView.swift */,
 				AB928003284E38B6000FBCD2 /* LevelButton.swift */,
@@ -328,7 +340,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB21B7762859289900A4A3A4 /* softpop.mp3 in Resources */,
 				AB927FD9284E2193000FBCD2 /* Preview Assets.xcassets in Resources */,
+				AB21B7742859269F00A4A3A4 /* soundTrack.mp3 in Resources */,
 				AB927FD6284E2193000FBCD2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,7 +381,9 @@
 				AB3F2C0C285776BA00DD8632 /* OnBoardView.swift in Sources */,
 				AB73D968284F975C009AD019 /* PuzzleView.swift in Sources */,
 				AB73D96B284F9AF0009AD019 /* LevelModel.swift in Sources */,
+				ABFF60582857F52100DE4708 /* AudioPlayer.swift in Sources */,
 				ABF89B922850E6E300633CB9 /* UserModel.swift in Sources */,
+				ABFF605A2858B9F800DE4708 /* HintView.swift in Sources */,
 				AB73D975284FD602009AD019 /* GuessView.swift in Sources */,
 				AB2D9BDF28538BE700444C61 /* GameLogic.swift in Sources */,
 				AB73D971284FC0B3009AD019 /* ResetRectView.swift in Sources */,

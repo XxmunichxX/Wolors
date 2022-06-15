@@ -22,9 +22,12 @@ struct PuzzleView: View {
     @State var showAnswerAlert = false
     @State var showNextLevelAlert = false
     @State var tipsShowed = false
+    @State var hintsShowed = false
     @State var keyboardTrigger = false
     @State var isGameOver = false
+    
     @State var tipsOffset: CGFloat = UIScreen.main.bounds.maxY+100
+    @State var hintsOffset: CGFloat = UIScreen.main.bounds.maxY+100
     
     
     @Binding var image: String
@@ -72,6 +75,9 @@ struct PuzzleView: View {
             TipsView()
                 .offset(y: tipsOffset)
             
+            HintView()
+                .offset(y: hintsOffset)
+            
             VStack {
                 HStack {
                     BackButtonView()
@@ -87,8 +93,29 @@ struct PuzzleView: View {
                                 }
                             }
                         }
+                    
                     HudShape(label: "\(user.lifes)", image: "heart.fill")
-                    HudShape(label: "Hint", image: "star.fill")
+                    CustomHudShape
+                        .onTapGesture {
+                            if user.lifes > 1 {
+                                hintsShowed.toggle()
+                                withAnimation(.spring()) {
+                                    if hintsShowed {
+                                        hintsOffset = 0
+                                    } else {
+                                        hintsOffset = UIScreen.main.bounds.maxY+100
+                                    }
+                                }
+                                if hintsShowed {
+                                    user.lifes -= 1
+                                }
+                            } else if user.lifes == 1 && hintsShowed {
+                                hintsShowed.toggle()
+                                withAnimation {
+                                    hintsOffset = UIScreen.main.bounds.maxY+100
+                                }
+                            }
+                        }
                 }
                 .padding()
                 
@@ -99,6 +126,7 @@ struct PuzzleView: View {
                     .onTapGesture {
                         withAnimation {
                             tipsOffset = UIScreen.main.bounds.maxY+100
+                            hintsOffset = UIScreen.main.bounds.maxY+100
                         }
                     }
                     .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification), perform: { _ in
@@ -161,6 +189,25 @@ struct PuzzleView: View {
             }
             .padding()
         }
+    }
+}
+
+extension PuzzleView {
+    private var CustomHudShape: some View {
+        RoundedRectangle(cornerRadius: 20)
+            .frame(width: 100, height: 40)
+            .foregroundColor(.theme.background)
+            .shadow(color: .black, radius: 2, x: 0, y: 0)
+            .overlay {
+                RoundedRectangle(cornerRadius: 20)
+                    .foregroundColor(.theme.hud)
+                    .frame(width: 80, height: 25)
+                    .shadow(color: .black.opacity(0.8), radius: 2, x: 3, y: 4)
+                    .overlay {
+                        Text("Hints")
+                            .foregroundColor(.theme.labels)
+                    }
+            }
     }
 }
 
