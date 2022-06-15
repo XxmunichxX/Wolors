@@ -19,7 +19,7 @@ struct MainView: View {
      */
     
     @EnvironmentObject var vm: LevelViewModel
-    @EnvironmentObject var user: User
+    @EnvironmentObject var user: UserViewModel
     
     @Binding var currentGameState: GameState
     
@@ -251,7 +251,7 @@ struct MainView_Previews: PreviewProvider {
             MainView(currentGameState: .constant( .mainScreen))
             MainView(currentGameState: .constant( .mainScreen)).preferredColorScheme(.dark)
         }
-        .environmentObject(User())
+        .environmentObject(UserViewModel())
         .environmentObject(LevelViewModel())
     }
 }

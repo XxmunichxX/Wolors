@@ -7,9 +7,8 @@
 
 import Foundation
 
-class User: ObservableObject {
-    @Published var name: String = ""
-    @Published var lifes: Int = 3
-    @Published var coins: Int = 0
-    @Published var hints: Int = 3
+struct UserModel: Codable {
+    var name: String = ""
+    var lifes: Int = 3
 }
+

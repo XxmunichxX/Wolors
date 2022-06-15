@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MenuView: View {
     
-    @EnvironmentObject var user: User
+    @EnvironmentObject var user: UserViewModel
     @Environment(\.colorScheme) var colorScheme
     
     let planetColors = PlanetColors()
@@ -116,9 +116,9 @@ extension MenuView {
                         }
                 }
         }
-        .disabled(user.name.isEmpty)
+            .disabled(user.user.name.isEmpty)
         .onTapGesture {
-            if user.name.isEmpty {
+            if user.user.name.isEmpty {
                 showNameAlert.toggle()
             }
         }
@@ -138,7 +138,7 @@ extension MenuView {
             .shadow(color: colorScheme == .dark ? .white.opacity(0.3) : .white, radius: 3, x: -4, y: -4)
             .shadow(color: .theme.darkShadow, radius: 3, x: 4, y: 4)
             .overlay {
-                TextField("What's your name?", text: $user.name)
+                TextField("What's your name?", text: $user.user.name)
                     .foregroundColor(.theme.labels)
                     .padding()
                     .disableAutocorrection(true)
@@ -147,9 +147,9 @@ extension MenuView {
                             .padding()
                             .offset(x:10)
                             .foregroundColor(.gray)
-                            .opacity(user.name.isEmpty ? 0.0 : 1.0)
+                            .opacity(user.user.name.isEmpty ? 0.0 : 1.0)
                             .onTapGesture {
-                                user.name = ""
+                                user.user.name = ""
                             }
                         , alignment: .trailing
                     )
@@ -165,6 +165,6 @@ struct MenuView_Previews: PreviewProvider {
             MenuView(opacity: .constant(1))
             MenuView(opacity: .constant(1)).preferredColorScheme(.dark)
         }
-        .environmentObject(User())
+        .environmentObject(UserViewModel())
     }
 }

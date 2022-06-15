@@ -49,6 +49,6 @@ struct HudShape_Previews: PreviewProvider {
             }
             .previewLayout(.fixed(width: 300, height: 300))
         }
-        .environmentObject(User())
+        .environmentObject(UserViewModel())
     }
 }

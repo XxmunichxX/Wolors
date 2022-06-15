@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SettingsView: View {
     
-    @EnvironmentObject var user: User
+    @EnvironmentObject var user: UserViewModel
 
     @Environment(\.colorScheme) var colorScheme
     
@@ -33,7 +33,7 @@ struct SettingsView: View {
                         Text("Username:")
                         Spacer()
                     }
-                    TextField(user.name, text: $user.name)
+                    TextField(user.user.name, text: $user.user.name)
                     Divider()
                     Toggle("Music", isOn: $musicOn)
                     Divider()
@@ -61,7 +61,7 @@ struct SettingsView_Previews: PreviewProvider {
             SettingsView()
             SettingsView().preferredColorScheme(.dark)
         }
-        .environmentObject(User())
+        .environmentObject(UserViewModel())
         .environmentObject(LevelViewModel())
     }
 }

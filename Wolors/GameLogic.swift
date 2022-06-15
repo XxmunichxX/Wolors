@@ -12,7 +12,7 @@ class GameLogic: ObservableObject {
     
     static let shared: GameLogic = GameLogic()
     
-    @EnvironmentObject var user: User
+    @EnvironmentObject var user: UserViewModel
     
     @Published var isGameOver: Bool = false
     

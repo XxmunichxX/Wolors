@@ -11,6 +11,7 @@
 		AB21B7762859289900A4A3A4 /* softpop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB21B7752859289800A4A3A4 /* softpop.mp3 */; };
 		AB21B778285A07F600A4A3A4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB21B777285A07F600A4A3A4 /* SettingsView.swift */; };
 		AB21B77A285A5FDF00A4A3A4 /* PlanetColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB21B779285A5FDF00A4A3A4 /* PlanetColors.swift */; };
+		AB21B77E285A7C4A00A4A3A4 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB21B77D285A7C4A00A4A3A4 /* UserViewModel.swift */; };
 		AB2D9BDF28538BE700444C61 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D9BDE28538BE700444C61 /* GameLogic.swift */; };
 		AB2D9BE12853940800444C61 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D9BE02853940800444C61 /* MenuView.swift */; };
 		AB3F2C0C285776BA00DD8632 /* OnBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3F2C0B285776BA00DD8632 /* OnBoardView.swift */; };
@@ -63,6 +64,7 @@
 		AB21B7752859289800A4A3A4 /* softpop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = softpop.mp3; sourceTree = "<group>"; };
 		AB21B777285A07F600A4A3A4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		AB21B779285A5FDF00A4A3A4 /* PlanetColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetColors.swift; sourceTree = "<group>"; };
+		AB21B77D285A7C4A00A4A3A4 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		AB2D9BDE28538BE700444C61 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
 		AB2D9BE02853940800444C61 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		AB3F2C0B285776BA00DD8632 /* OnBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardView.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				AB73D96C284F9B49009AD019 /* LevelViewModel.swift */,
+				AB21B77D285A7C4A00A4A3A4 /* UserViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				AB927FD2284E2191000FBCD2 /* WolorsApp.swift in Sources */,
 				AB7AC0282852812D005E116E /* GameState.swift in Sources */,
 				AB73D96D284F9B49009AD019 /* LevelViewModel.swift in Sources */,
+				AB21B77E285A7C4A00A4A3A4 /* UserViewModel.swift in Sources */,
 				AB21B778285A07F600A4A3A4 /* SettingsView.swift in Sources */,
 				AB21B77A285A5FDF00A4A3A4 /* PlanetColors.swift in Sources */,
 				AB7AC02A2852849F005E116E /* ContentView.swift in Sources */,

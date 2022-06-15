@@ -12,7 +12,7 @@ struct PuzzleView: View {
     @Environment(\.dismiss) var dismiss
     
     @EnvironmentObject var vm: LevelViewModel
-    @EnvironmentObject var user: User
+    @EnvironmentObject var user: UserViewModel
     
     @State var isRightGuess: Bool = false
     //@State var blurOffset:CGFloat = 28
@@ -229,7 +229,7 @@ struct PuzzleView_Previews: PreviewProvider {
             PuzzleView(image: .constant("Baloon"))
             PuzzleView(image: .constant("Baloon")).preferredColorScheme(.dark)
         }
-        .environmentObject(User())
+        .environmentObject(UserViewModel())
         .environmentObject(LevelViewModel())
     }
 }

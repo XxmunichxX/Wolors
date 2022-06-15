@@ -12,7 +12,7 @@ struct WolorsApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(User())
+                .environmentObject(UserViewModel())
                 .environmentObject(LevelViewModel())
         }
         

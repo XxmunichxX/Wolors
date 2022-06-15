@@ -12,7 +12,7 @@ struct LevelButton: View {
     @Environment(\.colorScheme) var colorScheme
     
     @ObservedObject var vm = LevelViewModel()
-    @EnvironmentObject var user: User
+    @EnvironmentObject var user: UserViewModel
     
     @State var offset: CGSize = .zero
     @State var showPuzzle: Bool = false
@@ -87,7 +87,7 @@ struct LevelButton_Previews: PreviewProvider {
             }
             .previewLayout(.fixed(width: 300, height: 300))
         }
-        .environmentObject(User())
+        .environmentObject(UserViewModel())
         .environmentObject(LevelViewModel())
     }
 }

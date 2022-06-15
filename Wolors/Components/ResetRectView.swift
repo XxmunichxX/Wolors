@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ResetRectView: View {
     
-    @EnvironmentObject var user:User
+    @EnvironmentObject var user:UserViewModel
     
     @State var answer = ""
     
@@ -62,6 +62,6 @@ struct OldGuessView_Previews: PreviewProvider {
             }
             .previewLayout(.fixed(width: 400, height: 300))
         }
-        .environmentObject(User())
+        .environmentObject(UserViewModel())
     }
 }

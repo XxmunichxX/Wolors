@@ -12,7 +12,7 @@ struct GuessView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) var dismiss
     
-    @EnvironmentObject var user:User
+    @EnvironmentObject var user:UserViewModel
     @EnvironmentObject var vm: LevelViewModel
     
     @State var answer = ""
@@ -106,6 +106,6 @@ struct GuessView_Previews: PreviewProvider {
             .previewLayout(.fixed(width: 450, height: 300))
             
         }
-        .environmentObject(User())
+        .environmentObject(UserViewModel())
     }
 }

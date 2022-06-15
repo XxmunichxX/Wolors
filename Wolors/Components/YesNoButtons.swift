@@ -38,6 +38,6 @@ struct YesNoButtons: View {
 struct YesNoButtons_Previews: PreviewProvider {
     static var previews: some View {
         YesNoButtons(label: "Yes", image: "heart.fill")
-            .environmentObject(User())
+            .environmentObject(UserViewModel())
     }
 }

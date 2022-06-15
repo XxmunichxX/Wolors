@@ -126,6 +126,6 @@ struct OnBoardView_Previews: PreviewProvider {
             OnBoardView().preferredColorScheme(.dark)
         }
         .environmentObject(LevelViewModel())
-        .environmentObject(User())
+        .environmentObject(UserViewModel())
     }
 }

@@ -53,6 +53,6 @@ struct HintView_Previews: PreviewProvider {
             HintView().preferredColorScheme(.dark)
         }
         .environmentObject(LevelViewModel())
-        .environmentObject(User())
+        .environmentObject(UserViewModel())
     }
 }
