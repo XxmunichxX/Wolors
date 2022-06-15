@@ -23,9 +23,6 @@ struct MainView: View {
     
     let screen = UIScreen.main.bounds
     
-    @State var player: AVAudioPlayer?
-    
-    @State var music: AVAudioPlayer!
     
     @State var positionXFirstPlanet = 0
     @State var positionXSecondPlanet = 0

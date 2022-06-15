@@ -47,11 +47,9 @@ struct SettingsView: View {
                 if musicOn {
                     musicOn = false
                     AudioManager.shared.stopSound()
-                    print(musicOn)
                 } else if !musicOn {
                     musicOn = true
                     AudioManager.shared.startBackGroundMusic()
-                    print("Else if: \(musicOn)")
                 }
             }
     }
