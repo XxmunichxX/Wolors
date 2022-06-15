@@ -10,19 +10,22 @@ import AVFoundation
 
 struct MainView: View {
     
+    /*
+     WHAT DO I NEED TO STORE:
+        Username
+        SelectedLevel
+        Lifes number
+        gameState
+     */
+    
     @EnvironmentObject var vm: LevelViewModel
     @EnvironmentObject var user: User
     
     @Binding var currentGameState: GameState
     
-    let colorOne: LinearGradient = LinearGradient(colors: [.theme.bigPlanetFirst, .theme.bigPlanetSecond], startPoint: .leading, endPoint: .trailing)
-    
-    let colorTwo: LinearGradient = LinearGradient(colors: [.indigo, .purple], startPoint: .leading, endPoint: .trailing)
-    
-    let colorThree: LinearGradient = LinearGradient(colors: [.indigo.opacity(0.7), .blue.opacity(0.7)], startPoint: .leading, endPoint: .trailing)
+    let planetColors = PlanetColors()
     
     let screen = UIScreen.main.bounds
-    
     
     @State var positionXFirstPlanet = 0
     @State var positionXSecondPlanet = 0
@@ -40,7 +43,7 @@ struct MainView: View {
     @State var levelXposition:CGFloat = 200
     @State var levelYposition:CGFloat = 200
     
-    @State var opacity:Double = 1
+    @State var opacity: Double = 1
     
     @State var showSettings = false
     @State var settingsOffset: CGFloat = UIScreen.main.bounds.maxY+100
@@ -68,6 +71,8 @@ struct MainView: View {
                     currentGameState = .playing
                 }
             
+            // MARK: LEVEL BUTTONS
+            
             ForEach(vm.levels, id:\.id) { level in
                 
                 switch vm.selectedLevel {
@@ -85,6 +90,8 @@ struct MainView: View {
                 }
             }
             
+            // MARK: SETTINGS
+            
             SettingsView()
                 .offset(y: showSettings ? 0 : settingsOffset)
             
@@ -93,6 +100,7 @@ struct MainView: View {
                     vm.selectedLevel > 0 ? 0 : moreToComeOffset
                 })
             
+            // MARK: RESET
             
             ResetRectView(yesPressed: $resetYes, noPressed: $resetNo)
                 .offset(y: resetOffset )
@@ -116,9 +124,10 @@ struct MainView: View {
                     }
                 }
             
+            // MARK: HUD
+            
             VStack {
                 HStack {
-                    // HudShape(label: "\(user.coins)", image: "circle.circle")
                     HudShape(label: "\(user.lifes)", image: "heart.fill")
                     Spacer()
                     Group {
@@ -140,6 +149,9 @@ struct MainView: View {
                 
             }
         }
+        .onAppear {
+            
+        }
     }
 }
 
@@ -148,7 +160,7 @@ struct MainView: View {
 extension MainView {
     private var Planets: some View {
         Group {
-            Planet(heigth: 500, width: 500, color: colorOne)
+            Planet(heigth: 500, width: 500, color: planetColors.colorOne)
                 .position(x: screen.minX+30, y: screen.maxY+100)
                 .offset(x: CGFloat(positionXFirstPlanet), y: CGFloat(positionYFirstPlanet))
                 .onAppear {
@@ -158,7 +170,7 @@ extension MainView {
                     }
                 }
             
-            Planet(heigth: 150, width: 150, color: colorTwo)
+            Planet(heigth: 150, width: 150, color: planetColors.colorTwo)
                 .position(x: screen.minX, y: screen.maxY-200)
                 .offset(x: CGFloat(positionXSecondPlanet), y: CGFloat(positionYSecondPlanet))
                 .onAppear {
@@ -167,7 +179,7 @@ extension MainView {
                     }
                 }
             
-            Planet(heigth: 150, width: 150, color: colorThree)
+            Planet(heigth: 150, width: 150, color: planetColors.colorThree)
                 .position(x: screen.maxX, y: screen.midY-100)
                 .offset(x: CGFloat(positionXThirdPlanet))
                 .onAppear {
@@ -175,17 +187,17 @@ extension MainView {
                         positionXThirdPlanet -= 40
                     }
                 }
-            Planet(heigth: 40, width: 40, color: colorOne)
+            Planet(heigth: 40, width: 40, color: planetColors.colorOne)
                 .position(x: 30, y: 200)
-            Planet(heigth: 20, width: 20, color: colorTwo)
+            Planet(heigth: 20, width: 20, color: planetColors.colorTwo)
                 .position(x: 230, y: 10)
-            Planet(heigth: 20, width: 20, color: colorThree)
+            Planet(heigth: 20, width: 20, color: planetColors.colorThree)
                 .position(x: 100, y: 400)
-            Planet(heigth: 10, width: 10, color: colorThree)
+            Planet(heigth: 10, width: 10, color: planetColors.colorThree)
                 .position(x: 30, y: 300)
-            Planet(heigth: 30, width: 30, color: colorOne)
+            Planet(heigth: 30, width: 30, color: planetColors.colorOne)
                 .position(x: 300, y: 450)
-            Planet(heigth: 10, width: 10, color: colorOne)
+            Planet(heigth: 10, width: 10, color: planetColors.colorOne)
                 .position(x: 330, y: 220)
         }
     }

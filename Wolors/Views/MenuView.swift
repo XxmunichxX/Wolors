@@ -12,12 +12,8 @@ struct MenuView: View {
     @EnvironmentObject var user: User
     @Environment(\.colorScheme) var colorScheme
     
-    let colorOne: LinearGradient = LinearGradient(colors: [.theme.bigPlanetFirst, .theme.bigPlanetSecond], startPoint: .leading, endPoint: .trailing)
-    
-    let colorTwo: LinearGradient = LinearGradient(colors: [.indigo, .purple], startPoint: .leading, endPoint: .trailing)
-    
-    let colorThree: LinearGradient = LinearGradient(colors: [.indigo.opacity(0.7), .blue.opacity(0.7)], startPoint: .leading, endPoint: .trailing)
-    
+    let planetColors = PlanetColors()
+
     let screen = UIScreen.main.bounds
     
     func hideKeyboard() {
@@ -55,7 +51,7 @@ struct MenuView: View {
 extension MenuView {
     private var Planets: some View {
         Group {
-            Planet(heigth: 500, width: 500, color: colorOne)
+            Planet(heigth: 500, width: 500, color: planetColors.colorOne)
                 .position(x: screen.minX+30, y: screen.maxY+100)
                 .offset(x: CGFloat(positionXFirstPlanet), y: CGFloat(positionYFirstPlanet))
                 .onAppear {
@@ -65,7 +61,7 @@ extension MenuView {
                     }
                 }
             
-            Planet(heigth: 150, width: 150, color: colorTwo)
+            Planet(heigth: 150, width: 150, color: planetColors.colorTwo)
                 .position(x: screen.minX, y: screen.maxY-200)
                 .offset(x: CGFloat(positionXSecondPlanet), y: CGFloat(positionYSecondPlanet))
                 .onAppear {
@@ -74,7 +70,7 @@ extension MenuView {
                     }
                 }
             
-            Planet(heigth: 150, width: 150, color: colorThree)
+            Planet(heigth: 150, width: 150, color: planetColors.colorThree)
                 .position(x: screen.maxX, y: screen.midY-100)
                 .offset(x: CGFloat(positionXThirdPlanet))
                 .onAppear {
@@ -82,17 +78,17 @@ extension MenuView {
                         positionXThirdPlanet -= 40
                     }
                 }
-            Planet(heigth: 40, width: 40, color: colorOne)
+            Planet(heigth: 40, width: 40, color: planetColors.colorOne)
                 .position(x: 30, y: 200)
-            Planet(heigth: 20, width: 20, color: colorTwo)
+            Planet(heigth: 20, width: 20, color: planetColors.colorTwo)
                 .position(x: 230, y: 10)
-            Planet(heigth: 20, width: 20, color: colorThree)
+            Planet(heigth: 20, width: 20, color: planetColors.colorThree)
                 .position(x: 100, y: 400)
-            Planet(heigth: 10, width: 10, color: colorThree)
+            Planet(heigth: 10, width: 10, color: planetColors.colorThree)
                 .position(x: 30, y: 300)
-            Planet(heigth: 30, width: 30, color: colorOne)
+            Planet(heigth: 30, width: 30, color: planetColors.colorOne)
                 .position(x: 300, y: 450)
-            Planet(heigth: 10, width: 10, color: colorOne)
+            Planet(heigth: 10, width: 10, color: planetColors.colorOne)
                 .position(x: 330, y: 220)
         }
     }
