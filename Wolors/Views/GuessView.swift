@@ -20,6 +20,7 @@ struct GuessView: View {
     @Binding var showSuccessAlert:Bool
     @Binding var showWrongAlert: Bool
     @Binding var showGameOver: Bool
+    @Binding var alreadyGuessed: Bool
     @Binding var keyboardTrigger: Bool
     
     @FocusState private var keyboardFocused: Bool
@@ -57,6 +58,9 @@ struct GuessView: View {
                             vm.guessedWords.append(answer.capitalized)
                             print(vm.guessedWords)
                             answer = ""
+                        } else if vm.guessedWords.contains(answer.capitalized) {
+                            alreadyGuessed.toggle()
+                            answer = ""
                         } else if user.lifes == 1 && !vm.levels[vm.selectedLevel].answers.contains(answer.capitalized) {
                             showGameOver.toggle()
                             user.lifes -= 1
@@ -91,12 +95,12 @@ extension GuessView {
 struct GuessView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            GuessView(showSuccessAlert: .constant(false), showWrongAlert: .constant(false), showGameOver: .constant(false), keyboardTrigger: .constant(false))
+            GuessView(showSuccessAlert: .constant(false), showWrongAlert: .constant(false), showGameOver: .constant(false), alreadyGuessed: .constant(false), keyboardTrigger: .constant(false))
                 .previewLayout(.fixed(width: 450, height: 300))
             
             ZStack {
                 Color.theme.background.ignoresSafeArea()
-                GuessView(showSuccessAlert: .constant(false), showWrongAlert: .constant(false), showGameOver: .constant(false), keyboardTrigger: .constant(false))
+                GuessView(showSuccessAlert: .constant(false), showWrongAlert: .constant(false), showGameOver: .constant(false), alreadyGuessed: .constant(false), keyboardTrigger: .constant(false))
                     .preferredColorScheme(.dark)
             }
             .previewLayout(.fixed(width: 450, height: 300))

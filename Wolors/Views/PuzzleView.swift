@@ -17,10 +17,14 @@ struct PuzzleView: View {
     @State var isRightGuess: Bool = false
     //@State var blurOffset:CGFloat = 28
     @State var guessOffset: CGFloat = -50
+    
     @State var showSuccessAlert = false
     @State var showWrongAlert = false
     @State var showAnswerAlert = false
     @State var showNextLevelAlert = false
+    @State var alreadyGuessed = false
+    
+    
     @State var tipsShowed = false
     @State var hintsShowed = false
     @State var keyboardTrigger = false
@@ -122,7 +126,7 @@ struct PuzzleView: View {
                 
                 Spacer()
                 
-                GuessView(showSuccessAlert: $showSuccessAlert, showWrongAlert: $showWrongAlert, showGameOver: $isGameOver, keyboardTrigger: $keyboardTrigger)
+                GuessView(showSuccessAlert: $showSuccessAlert, showWrongAlert: $showWrongAlert, showGameOver: $isGameOver, alreadyGuessed: $alreadyGuessed, keyboardTrigger: $keyboardTrigger)
                     .offset(y: guessOffset)
                     .onTapGesture {
                         withAnimation {
@@ -184,6 +188,11 @@ struct PuzzleView: View {
                                 hideKeyboard()
                             }
                             vm.guessedWords.removeAll()
+                            
+                        }
+                    }
+                    .alert("Word already guessed!", isPresented: $alreadyGuessed) {
+                        Button("Ok!") {
                             
                         }
                     }
