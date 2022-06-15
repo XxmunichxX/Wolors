@@ -88,6 +88,7 @@ struct PuzzleView: View {
                         .padding(.trailing,9)
                     HudShape(label: "\(vm.levels[vm.selectedLevel].answers.count)", image: "questionmark")
                         .onTapGesture {
+                            AudioManager.shared.startPlayer(track: "softpop")
                             tipsShowed.toggle()
                             withAnimation(.spring()) {
                                 if tipsShowed {

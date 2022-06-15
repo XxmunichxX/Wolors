@@ -58,21 +58,30 @@ struct MainView: View {
             }
             .zIndex(opacity)
             .opacity(opacity == 0 && !resetNo ? 0 : 1)
+            .onAppear {
+                currentGameState = .mainScreen
+            }
             
             Levels
                 .opacity(opacity == 1 || resetNo ? 0 : 1)
+                .onAppear {
+                    currentGameState = .playing
+                }
             
             ForEach(vm.levels, id:\.id) { level in
-                // TO DO: USE A SWITCH
-                if vm.selectedLevel == 1 {
+                
+                switch vm.selectedLevel {
+                case 1:
                     LevelButton(selectedLevel: $vm.selectedLevel, image: level.image, isSolved: level.isSolved)
                         .position(x: 200, y: 500)
-                } else if vm.selectedLevel == 2 {
+                case 2:
                     LevelButton(selectedLevel: $vm.selectedLevel, image: level.image, isSolved: level.isSolved)
                         .position(x: 150, y: 400)
-                } else if vm.selectedLevel == 3 {
+                case 3:
                     LevelButton(selectedLevel: $vm.selectedLevel, image: level.image, isSolved: level.isSolved)
                         .position(x: 120, y: 300)
+                default:
+                    Text("")
                 }
             }
             
