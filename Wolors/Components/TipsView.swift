@@ -17,7 +17,7 @@ struct TipsView: View {
             .frame(width: 300, height: 180)
             .overlay {
                 VStack {
-                    Text("You have to guess \(vm.levels[vm.selectedLevel].answers.count) words")
+                    Text("You have to guess \(vm.levels[vm.level.selectedLevel].answers.count) words")
                         .bold()
                         .padding()
                         .padding(.vertical,10)

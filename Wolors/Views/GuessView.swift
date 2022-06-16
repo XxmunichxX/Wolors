@@ -50,10 +50,10 @@ struct GuessView: View {
                         , alignment: .trailing
                     )
                     .onSubmit {
-                        if vm.levels[vm.selectedLevel].answers.contains(answer.capitalized) {
+                        if vm.levels[vm.level.selectedLevel].answers.contains(answer.capitalized) {
                             showSuccessAlert.toggle()
-                            if let index = vm.levels[vm.selectedLevel].answers.firstIndex(of: answer.capitalized) {
-                                vm.levels[vm.selectedLevel].answers.remove(at: index)
+                            if let index = vm.levels[vm.level.selectedLevel].answers.firstIndex(of: answer.capitalized) {
+                                vm.levels[vm.level.selectedLevel].answers.remove(at: index)
                             }
                             vm.guessedWords.append(answer.capitalized)
                             print(vm.guessedWords)
@@ -61,7 +61,7 @@ struct GuessView: View {
                         } else if vm.guessedWords.contains(answer.capitalized) {
                             alreadyGuessed.toggle()
                             answer = ""
-                        } else if user.user.lifes == 1 && !vm.levels[vm.selectedLevel].answers.contains(answer.capitalized) {
+                        } else if user.user.lifes == 1 && !vm.levels[vm.level.selectedLevel].answers.contains(answer.capitalized) {
                             showGameOver.toggle()
                             user.user.lifes -= 1
                             answer = ""

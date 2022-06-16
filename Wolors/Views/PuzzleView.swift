@@ -86,7 +86,7 @@ struct PuzzleView: View {
                 HStack {
                     BackButtonView()
                         .padding(.trailing,9)
-                    HudShape(label: "\(vm.levels[vm.selectedLevel].answers.count)", image: "questionmark")
+                    HudShape(label: "\(vm.levels[vm.level.selectedLevel].answers.count)", image: "questionmark")
                         .onTapGesture {
                             AudioManager.shared.startPlayer(track: "softpop")
                             tipsShowed.toggle()
@@ -150,9 +150,9 @@ struct PuzzleView: View {
                     .alert("YAYYY! CORRECT! 😁 ", isPresented: $showSuccessAlert) {
                         Button("Great!"){
                             
-                            if vm.levels[vm.selectedLevel].answers.isEmpty {
-                                vm.levels[vm.selectedLevel].isSolved = true
-                                vm.selectedLevel += 1
+                            if vm.levels[vm.level.selectedLevel].answers.isEmpty {
+                                vm.levels[vm.level.selectedLevel].isSolved = true
+                                vm.level.selectedLevel += 1
                                 showNextLevelAlert.toggle()
                             }
                             user.user.lifes += 1

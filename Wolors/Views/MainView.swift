@@ -75,15 +75,15 @@ struct MainView: View {
             
             ForEach(vm.levels, id:\.id) { level in
                 
-                switch vm.selectedLevel {
+                switch vm.level.selectedLevel {
                 case 1:
-                    LevelButton(selectedLevel: $vm.selectedLevel, image: level.image, isSolved: level.isSolved)
+                    LevelButton(selectedLevel: $vm.level.selectedLevel, image: level.image, isSolved: level.isSolved)
                         .position(x: 200, y: 500)
                 case 2:
-                    LevelButton(selectedLevel: $vm.selectedLevel, image: level.image, isSolved: level.isSolved)
+                    LevelButton(selectedLevel: $vm.level.selectedLevel, image: level.image, isSolved: level.isSolved)
                         .position(x: 150, y: 400)
                 case 3:
-                    LevelButton(selectedLevel: $vm.selectedLevel, image: level.image, isSolved: level.isSolved)
+                    LevelButton(selectedLevel: $vm.level.selectedLevel, image: level.image, isSolved: level.isSolved)
                         .position(x: 120, y: 300)
                 default:
                     Text("")
@@ -97,7 +97,7 @@ struct MainView: View {
             
             MoreToCome
                 .offset(y: withAnimation(.spring()) {
-                    vm.selectedLevel > 0 ? 0 : moreToComeOffset
+                    vm.level.selectedLevel > 0 ? 0 : moreToComeOffset
                 })
             
             // MARK: RESET
@@ -150,11 +150,10 @@ struct MainView: View {
             }
         }
         .onAppear {
-            
+            //user.loadUser()
         }
     }
 }
-
 
 
 extension MainView {
@@ -239,6 +238,15 @@ extension MainView {
                         .foregroundColor(.theme.labels)
                         .font(.system(size: 50))
                         .padding()
+                    
+                    //MARK: RESET
+                    
+                  /*  Button(action: {
+                        withAnimation(.spring()) {
+                            moreToComeOffset = screen.maxY+100
+                        }}) {
+                        Text("Reset")
+                    } */
                 }
             }
     }

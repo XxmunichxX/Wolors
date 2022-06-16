@@ -12,14 +12,9 @@ class GameLogic: ObservableObject {
     
     static let shared: GameLogic = GameLogic()
     
-    @EnvironmentObject var user: UserViewModel
-    
     @Published var isGameOver: Bool = false
     
     func setUpGame() {
-        
-        //LIFES = 3
-        // NAME = ""
         
         self.isGameOver = false
     }

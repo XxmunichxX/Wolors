@@ -27,13 +27,13 @@ struct HintView: View {
                     
                     switch vm.guessedWords.count {
                     case 0:
-                        Text("\(vm.levels[vm.selectedLevel].hints[0])")
+                        Text("\(vm.levels[vm.level.selectedLevel].hints[0])")
                     case 1:
-                        Text("\(vm.levels[vm.selectedLevel].hints[1])")
+                        Text("\(vm.levels[vm.level.selectedLevel].hints[1])")
                     case 2:
-                        Text("\(vm.levels[vm.selectedLevel].hints[2])")
+                        Text("\(vm.levels[vm.level.selectedLevel].hints[2])")
                     case 3:
-                        Text("\(vm.levels[vm.selectedLevel].hints[3])")
+                        Text("\(vm.levels[vm.level.selectedLevel].hints[3])")
                     default:
                         Text("No Hint")
                     }

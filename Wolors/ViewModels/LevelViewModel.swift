@@ -9,7 +9,11 @@ import Foundation
 
 class LevelViewModel: ObservableObject {
     
-    let level = Level()
+    @Published var level = Level() {
+        didSet {
+            saveReachedLevel()
+        }
+    }
     
     @Published var levels: [Level] = [
         Level(image: "Baloon", answers: ["Baloons", "Love", "Sky", "Flying"],hints: ["They are not racoons, just...", "How deep is your...", "The moon is full, the .. full of stars", "Overflying's never over"],isSolved: false),
@@ -22,9 +26,19 @@ class LevelViewModel: ObservableObject {
     
     @Published var solvedLevels = [Level]()
     
-    @Published var selectedLevel = 0
-    
     func saveReachedLevel() {
+        if let encodedLevel = try? JSONEncoder().encode(level.selectedLevel) {
+            UserDefaults.standard.set(encodedLevel, forKey: "SelectedLevel")
+        }
+    }
+    
+    func loadLevel() {
+        guard
+            let data = UserDefaults.standard.data(forKey: "SelectedLevel"),
+            let savedLevel = try? JSONDecoder().decode(Level.self, from: data)
+        else { return }
+        
+        self.level = savedLevel
         
     }
 
