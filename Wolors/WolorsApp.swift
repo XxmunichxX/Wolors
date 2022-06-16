@@ -10,6 +10,8 @@ import SwiftUI
 @main
 struct WolorsApp: App {
     
+    @UIApplicationDelegateAdaptor var delegate: AppDelegate
+    
     @EnvironmentObject var user: UserViewModel
     
     var body: some Scene {

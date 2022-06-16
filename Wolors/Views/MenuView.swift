@@ -97,7 +97,8 @@ extension MenuView {
 
 extension MenuView {
     private var PlayButton: some View {
-        Button(action:{ withAnimation(.spring()) {opacity -= 1};
+        Button(action:{ withAnimation(.spring()) {
+            opacity = 0};
             impactHeavy.impactOccurred();
             AudioManager.shared.startPlayer(track: "softpop");
             user.user.logged = true;

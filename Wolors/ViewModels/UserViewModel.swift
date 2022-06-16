@@ -6,12 +6,13 @@
 //
 
 import Foundation
+import SwiftUI
 
 class UserViewModel: ObservableObject {
     
     @Published var user = UserModel() {
         didSet {
-            saveUser()
+            saveUser()  // IS GONNA SAVE THE USER MODEL EVERYTIME THERE'S A CHANGE
         }
     }
     

@@ -9,7 +9,7 @@ import SwiftUI
 import AVFoundation
 
 struct MainView: View {
-        
+    
     @EnvironmentObject var vm: LevelViewModel
     @EnvironmentObject var user: UserViewModel
     
@@ -32,8 +32,6 @@ struct MainView: View {
     
     @State var levelXposition:CGFloat = 200
     @State var levelYposition:CGFloat = 200
-    
-//    @State var opacity: Double = 1
     
     @Binding var opacity: Double
     
@@ -83,7 +81,7 @@ struct MainView: View {
             
             MoreToCome
                 .offset(y: withAnimation(.spring()) {
-                    vm.level.selectedLevel > 0 ? 0 : moreToComeOffset
+                    vm.level.selectedLevel > 0 && user.user.logged ? 0 : moreToComeOffset
                 })
             
             // MARK: RESET
@@ -224,12 +222,25 @@ extension MainView {
                     
                     //MARK: RESET
                     
-                  /*  Button(action: {
+                    Button(action: {
+                        user.user.name = "";
+                        user.user.lifes = 3;
+                        vm.level.selectedLevel = 0;
+                        vm.levels[vm.level.selectedLevel].isSolved = false;
                         withAnimation(.spring()) {
-                            moreToComeOffset = screen.maxY+100
+                            moreToComeOffset = screen.maxY+100;
+                            user.user.logged = false
                         }}) {
-                        Text("Reset")
-                    } */
+                            RoundedRectangle(cornerRadius: 20)
+                                .foregroundColor(.theme.hud)
+                                .frame(width: 110, height: 37)
+                                .shadow(color: .black.opacity(0.8), radius: 2, x: 3, y: 4)
+                                .overlay {
+                                    Text("Reset")
+                                        .foregroundColor(.theme.labels)
+                                }
+                                .padding()
+                        }
                 }
             }
     }

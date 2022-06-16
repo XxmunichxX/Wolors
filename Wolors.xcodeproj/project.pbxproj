@@ -15,6 +15,7 @@
 		AB2D9BE12853940800444C61 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D9BE02853940800444C61 /* MenuView.swift */; };
 		AB3F2C0C285776BA00DD8632 /* OnBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3F2C0B285776BA00DD8632 /* OnBoardView.swift */; };
 		AB5043CC2854AF9A00AE15C1 /* TipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5043CB2854AF9A00AE15C1 /* TipsView.swift */; };
+		AB62B953285B5BC300F83CFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB62B952285B5BC300F83CFC /* AppDelegate.swift */; };
 		AB73D968284F975C009AD019 /* PuzzleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73D967284F975B009AD019 /* PuzzleView.swift */; };
 		AB73D96B284F9AF0009AD019 /* LevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73D96A284F9AF0009AD019 /* LevelModel.swift */; };
 		AB73D96D284F9B49009AD019 /* LevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73D96C284F9B49009AD019 /* LevelViewModel.swift */; };
@@ -66,6 +67,7 @@
 		AB2D9BE02853940800444C61 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		AB3F2C0B285776BA00DD8632 /* OnBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardView.swift; sourceTree = "<group>"; };
 		AB5043CB2854AF9A00AE15C1 /* TipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsView.swift; sourceTree = "<group>"; };
+		AB62B952285B5BC300F83CFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB73D967284F975B009AD019 /* PuzzleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleView.swift; sourceTree = "<group>"; };
 		AB73D96A284F9AF0009AD019 /* LevelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelModel.swift; sourceTree = "<group>"; };
 		AB73D96C284F9B49009AD019 /* LevelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			children = (
 				AB927FD1284E2191000FBCD2 /* WolorsApp.swift */,
 				AB7AC0292852849F005E116E /* ContentView.swift */,
+				AB62B952285B5BC300F83CFC /* AppDelegate.swift */,
 				AB73D96E284FA2B7009AD019 /* Models */,
 				AB73D96F284FA2C8009AD019 /* ViewModels */,
 				AB73D969284F97B8009AD019 /* Views */,
@@ -384,6 +387,7 @@
 				AB21B77A285A5FDF00A4A3A4 /* PlanetColors.swift in Sources */,
 				AB7AC02A2852849F005E116E /* ContentView.swift in Sources */,
 				AB3F2C0C285776BA00DD8632 /* OnBoardView.swift in Sources */,
+				AB62B953285B5BC300F83CFC /* AppDelegate.swift in Sources */,
 				AB73D968284F975C009AD019 /* PuzzleView.swift in Sources */,
 				AB73D96B284F9AF0009AD019 /* LevelModel.swift in Sources */,
 				ABFF60582857F52100DE4708 /* AudioPlayer.swift in Sources */,

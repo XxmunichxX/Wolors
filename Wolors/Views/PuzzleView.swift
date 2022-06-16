@@ -153,9 +153,11 @@ struct PuzzleView: View {
                             if vm.levels[vm.level.selectedLevel].answers.isEmpty {
                                 vm.levels[vm.level.selectedLevel].isSolved = true
                                 vm.level.selectedLevel += 1
-                                showNextLevelAlert.toggle()
+                                showNextLevelAlert = true
                             }
                             user.user.lifes += 1
+                            print(showNextLevelAlert)
+                            
                             /* withAnimation(.linear(duration: 2)) {
                              blurOffset = 0
                              } */
@@ -183,13 +185,11 @@ struct PuzzleView: View {
                         }
                     }
                     .alert("You did it! \nLevel Completed!", isPresented: $showNextLevelAlert) {
-                        Button("Let's go!"){
-                            withAnimation {
-                                dismiss.callAsFunction()
-                                hideKeyboard()
-                            }
+                        Button("Let's go!") {
+                            dismiss.callAsFunction()
+                            hideKeyboard()
                             vm.guessedWords.removeAll()
-                            
+                            showNextLevelAlert = false
                         }
                     }
                     .alert("Word already guessed!", isPresented: $alreadyGuessed) {
