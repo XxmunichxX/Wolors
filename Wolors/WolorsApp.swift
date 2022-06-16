@@ -9,12 +9,14 @@ import SwiftUI
 
 @main
 struct WolorsApp: App {
+    
+    @EnvironmentObject var user: UserViewModel
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(UserViewModel())
                 .environmentObject(LevelViewModel())
         }
-        
     }
 }

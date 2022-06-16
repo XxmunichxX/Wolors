@@ -9,15 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var user: UserModel = UserModel()
+    @EnvironmentObject var user: UserViewModel
     
     var body: some View {
         
-        switch user.logged {
+        switch user.user.logged {
         case false:
             OnBoardView()
         case true:
-            MainView()
+            MainView(opacity: .constant(0))
         }
     }
 }

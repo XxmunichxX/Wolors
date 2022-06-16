@@ -9,6 +9,8 @@ import SwiftUI
 
 struct OnBoardView: View {
     
+    @EnvironmentObject var user: UserViewModel
+    
     @Environment(\.colorScheme) var colorScheme
     
     @State private var selection = 0
@@ -40,7 +42,7 @@ struct OnBoardView: View {
             }
         }
         .fullScreenCover(isPresented: $showMenu) {
-            MainView()
+            MainView(opacity: .constant(1))
         }
         .onAppear {
             AudioManager.shared.startBackGroundMusic()

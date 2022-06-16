@@ -9,15 +9,7 @@ import SwiftUI
 import AVFoundation
 
 struct MainView: View {
-    
-    /*
-     WHAT DO I NEED TO STORE:
-        Username
-        SelectedLevel
-        Lifes number
-        gameState
-     */
-    
+        
     @EnvironmentObject var vm: LevelViewModel
     @EnvironmentObject var user: UserViewModel
     
@@ -41,7 +33,9 @@ struct MainView: View {
     @State var levelXposition:CGFloat = 200
     @State var levelYposition:CGFloat = 200
     
-    @State var opacity: Double = 1
+//    @State var opacity: Double = 1
+    
+    @Binding var opacity: Double
     
     @State var showSettings = false
     @State var settingsOffset: CGFloat = UIScreen.main.bounds.maxY+100
@@ -245,8 +239,8 @@ extension MainView {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            MainView()
-            MainView().preferredColorScheme(.dark)
+            MainView(opacity: .constant(1))
+            MainView(opacity: .constant(0)).preferredColorScheme(.dark)
         }
         .environmentObject(UserViewModel())
         .environmentObject(LevelViewModel())

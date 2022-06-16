@@ -12,7 +12,6 @@
 		AB21B778285A07F600A4A3A4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB21B777285A07F600A4A3A4 /* SettingsView.swift */; };
 		AB21B77A285A5FDF00A4A3A4 /* PlanetColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB21B779285A5FDF00A4A3A4 /* PlanetColors.swift */; };
 		AB21B77E285A7C4A00A4A3A4 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB21B77D285A7C4A00A4A3A4 /* UserViewModel.swift */; };
-		AB2D9BDF28538BE700444C61 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D9BDE28538BE700444C61 /* GameLogic.swift */; };
 		AB2D9BE12853940800444C61 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D9BE02853940800444C61 /* MenuView.swift */; };
 		AB3F2C0C285776BA00DD8632 /* OnBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3F2C0B285776BA00DD8632 /* OnBoardView.swift */; };
 		AB5043CC2854AF9A00AE15C1 /* TipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5043CB2854AF9A00AE15C1 /* TipsView.swift */; };
@@ -64,7 +63,6 @@
 		AB21B777285A07F600A4A3A4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		AB21B779285A5FDF00A4A3A4 /* PlanetColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetColors.swift; sourceTree = "<group>"; };
 		AB21B77D285A7C4A00A4A3A4 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
-		AB2D9BDE28538BE700444C61 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
 		AB2D9BE02853940800444C61 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		AB3F2C0B285776BA00DD8632 /* OnBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardView.swift; sourceTree = "<group>"; };
 		AB5043CB2854AF9A00AE15C1 /* TipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsView.swift; sourceTree = "<group>"; };
@@ -177,7 +175,6 @@
 			children = (
 				AB927FD1284E2191000FBCD2 /* WolorsApp.swift */,
 				AB7AC0292852849F005E116E /* ContentView.swift */,
-				AB2D9BDE28538BE700444C61 /* GameLogic.swift */,
 				AB73D96E284FA2B7009AD019 /* Models */,
 				AB73D96F284FA2C8009AD019 /* ViewModels */,
 				AB73D969284F97B8009AD019 /* Views */,
@@ -393,7 +390,6 @@
 				ABF89B922850E6E300633CB9 /* UserModel.swift in Sources */,
 				ABFF605A2858B9F800DE4708 /* HintView.swift in Sources */,
 				AB73D975284FD602009AD019 /* GuessView.swift in Sources */,
-				AB2D9BDF28538BE700444C61 /* GameLogic.swift in Sources */,
 				AB73D971284FC0B3009AD019 /* ResetRectView.swift in Sources */,
 				AB927FFD284E272A000FBCD2 /* Color.swift in Sources */,
 				AB928004284E38B6000FBCD2 /* LevelButton.swift in Sources */,
