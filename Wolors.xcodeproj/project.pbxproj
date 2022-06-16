@@ -22,7 +22,6 @@
 		AB73D971284FC0B3009AD019 /* ResetRectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73D970284FC0B3009AD019 /* ResetRectView.swift */; };
 		AB73D973284FCF68009AD019 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73D972284FCF68009AD019 /* TextField.swift */; };
 		AB73D975284FD602009AD019 /* GuessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73D974284FD602009AD019 /* GuessView.swift */; };
-		AB7AC0282852812D005E116E /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7AC0272852812D005E116E /* GameState.swift */; };
 		AB7AC02A2852849F005E116E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7AC0292852849F005E116E /* ContentView.swift */; };
 		AB927FD2284E2191000FBCD2 /* WolorsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB927FD1284E2191000FBCD2 /* WolorsApp.swift */; };
 		AB927FD4284E2191000FBCD2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB927FD3284E2191000FBCD2 /* MainView.swift */; };
@@ -75,7 +74,6 @@
 		AB73D970284FC0B3009AD019 /* ResetRectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetRectView.swift; sourceTree = "<group>"; };
 		AB73D972284FCF68009AD019 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		AB73D974284FD602009AD019 /* GuessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessView.swift; sourceTree = "<group>"; };
-		AB7AC0272852812D005E116E /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		AB7AC0292852849F005E116E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AB927FCE284E2191000FBCD2 /* Wolors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wolors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB927FD1284E2191000FBCD2 /* WolorsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WolorsApp.swift; sourceTree = "<group>"; };
@@ -231,7 +229,6 @@
 			isa = PBXGroup;
 			children = (
 				ABFF60572857F52100DE4708 /* AudioPlayer.swift */,
-				AB7AC0272852812D005E116E /* GameState.swift */,
 				AB21B779285A5FDF00A4A3A4 /* PlanetColors.swift */,
 				AB927FFF284E28DD000FBCD2 /* Planet.swift */,
 				ABFF60592858B9F800DE4708 /* HintView.swift */,
@@ -384,7 +381,6 @@
 				AB2D9BE12853940800444C61 /* MenuView.swift in Sources */,
 				AB928002284E3124000FBCD2 /* HudShape.swift in Sources */,
 				AB927FD2284E2191000FBCD2 /* WolorsApp.swift in Sources */,
-				AB7AC0282852812D005E116E /* GameState.swift in Sources */,
 				AB73D96D284F9B49009AD019 /* LevelViewModel.swift in Sources */,
 				AB21B77E285A7C4A00A4A3A4 /* UserViewModel.swift in Sources */,
 				AB21B778285A07F600A4A3A4 /* SettingsView.swift in Sources */,

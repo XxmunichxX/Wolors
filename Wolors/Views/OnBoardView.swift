@@ -40,7 +40,7 @@ struct OnBoardView: View {
             }
         }
         .fullScreenCover(isPresented: $showMenu) {
-            MainView(currentGameState: .constant(.mainScreen))
+            MainView()
         }
         .onAppear {
             AudioManager.shared.startBackGroundMusic()

@@ -21,8 +21,6 @@ struct MainView: View {
     @EnvironmentObject var vm: LevelViewModel
     @EnvironmentObject var user: UserViewModel
     
-    @Binding var currentGameState: GameState
-    
     let planetColors = PlanetColors()
     
     let screen = UIScreen.main.bounds
@@ -61,15 +59,9 @@ struct MainView: View {
             }
             .zIndex(opacity)
             .opacity(opacity == 0 && !resetNo ? 0 : 1)
-            .onAppear {
-                currentGameState = .mainScreen
-            }
             
             Levels
                 .opacity(opacity == 1 || resetNo ? 0 : 1)
-                .onAppear {
-                    currentGameState = .playing
-                }
             
             // MARK: LEVEL BUTTONS
             
@@ -148,9 +140,6 @@ struct MainView: View {
                 Spacer()
                 
             }
-        }
-        .onAppear {
-            //user.loadUser()
         }
     }
 }
@@ -256,8 +245,8 @@ extension MainView {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            MainView(currentGameState: .constant( .mainScreen))
-            MainView(currentGameState: .constant( .mainScreen)).preferredColorScheme(.dark)
+            MainView()
+            MainView().preferredColorScheme(.dark)
         }
         .environmentObject(UserViewModel())
         .environmentObject(LevelViewModel())

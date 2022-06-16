@@ -10,6 +10,7 @@ import SwiftUI
 struct MenuView: View {
     
     @EnvironmentObject var user: UserViewModel
+    
     @Environment(\.colorScheme) var colorScheme
     
     let planetColors = PlanetColors()
@@ -99,6 +100,7 @@ extension MenuView {
         Button(action:{ withAnimation(.spring()) {opacity -= 1};
             impactHeavy.impactOccurred();
             AudioManager.shared.startPlayer(track: "softpop");
+            user.user.logged = true;
             hideKeyboard()}) {
             RoundedRectangle(cornerRadius: 30)
                 .frame(width: 120, height: 60)

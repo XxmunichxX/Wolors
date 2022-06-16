@@ -10,5 +10,6 @@ import Foundation
 struct UserModel: Codable {
     var name: String = ""
     var lifes: Int = 3
+    var logged: Bool = false
 }
 
