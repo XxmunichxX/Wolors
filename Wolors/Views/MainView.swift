@@ -82,7 +82,7 @@ struct MainView: View {
             MoreToCome
                 .offset(y: withAnimation(.spring()) {
                     vm.level.selectedLevel > 0 && user.user.logged ? 0 : moreToComeOffset
-                })
+                }) 
             
             // MARK: RESET
             
